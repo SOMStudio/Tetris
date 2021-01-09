@@ -1,0 +1,1435 @@
+fileFormatVersion: 2
+guid: c224ae476e2cb4c4e85f336277012a3f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6448381345748232300
+    second: Black2x_0
+  - first:
+      213: 3104775568578483705
+    second: Black2x_1
+  - first:
+      213: -1072778537851804836
+    second: Black2x_2
+  - first:
+      213: 7517877831836505314
+    second: Black2x_3
+  - first:
+      213: 741724495492301002
+    second: Black2x_4
+  - first:
+      213: 2794002852894749552
+    second: Black2x_5
+  - first:
+      213: -1904773174619451280
+    second: Black2x_6
+  - first:
+      213: 6563596809312459147
+    second: Black2x_7
+  - first:
+      213: -5793911923633815571
+    second: Black2x_8
+  - first:
+      213: -3525252087547506734
+    second: Black2x_9
+  - first:
+      213: 7515140147507265658
+    second: Black2x_10
+  - first:
+      213: 1612834542481446370
+    second: Black2x_11
+  - first:
+      213: 6591624450832049452
+    second: Black2x_12
+  - first:
+      213: -3402807095840391635
+    second: Black2x_13
+  - first:
+      213: -5351474885038905916
+    second: Black2x_14
+  - first:
+      213: -5540622708279498662
+    second: Black2x_15
+  - first:
+      213: -6732015995888224893
+    second: Black2x_16
+  - first:
+      213: 1116297725969662633
+    second: Black2x_17
+  - first:
+      213: -7528385929800019065
+    second: Black2x_18
+  - first:
+      213: 7640565205797364103
+    second: Black2x_19
+  - first:
+      213: -1277875912610310624
+    second: Black2x_20
+  - first:
+      213: 5917707244972836556
+    second: Black2x_21
+  - first:
+      213: 5643596768328442597
+    second: Black2x_22
+  - first:
+      213: -4199962872558052763
+    second: Black2x_23
+  - first:
+      213: -6908917398599623031
+    second: Black2x_24
+  - first:
+      213: -4965228747653756032
+    second: Black2x_26
+  - first:
+      213: 2936659879688759796
+    second: Black2x_28
+  - first:
+      213: -2909618469944619800
+    second: Black2x_29
+  - first:
+      213: 551859478630716874
+    second: Black2x_30
+  - first:
+      213: -491810237175613875
+    second: Black2x_31
+  - first:
+      213: 39456735454221293
+    second: Black2x_32
+  - first:
+      213: -3113440118180666127
+    second: Black2x_33
+  - first:
+      213: 302565717042022753
+    second: Black2x_34
+  - first:
+      213: 2468588267713969981
+    second: Black2x_35
+  - first:
+      213: -3969030138277377469
+    second: Black2x_38
+  - first:
+      213: -7081022391463662619
+    second: Black2x_39
+  - first:
+      213: 2199783425240829092
+    second: Black2x_41
+  - first:
+      213: 5764833935122790829
+    second: Black2x_42
+  - first:
+      213: 579690501015620115
+    second: Black2x_43
+  - first:
+      213: -1938351030408837736
+    second: Black2x_44
+  - first:
+      213: 4620612583541898968
+    second: Black2x_45
+  - first:
+      213: 9198122902432847940
+    second: Black2x_46
+  - first:
+      213: -8386401520296994190
+    second: Black2x_53
+  - first:
+      213: -4093792447665749469
+    second: Black2x_56
+  - first:
+      213: -5781231456088490531
+    second: Black2x_57
+  - first:
+      213: -5255671426704070178
+    second: Black2x_59
+  - first:
+      213: 892886811337495973
+    second: Black2x_60
+  - first:
+      213: -792637445488073782
+    second: Black2x_61
+  - first:
+      213: 6335018408645323544
+    second: Black2x_62
+  - first:
+      213: -674758443137215436
+    second: Black2x_63
+  - first:
+      213: 6430071835499979539
+    second: Black2x_64
+  - first:
+      213: -2654130275358639256
+    second: Black2x_65
+  - first:
+      213: -1983585346726937148
+    second: Black2x_66
+  - first:
+      213: -217892132308087590
+    second: Black2x_67
+  - first:
+      213: 2291293136659689264
+    second: Black2x_68
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Black2x_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 651
+        width: 101
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68b44745f16c62b4c979e26177f105da
+      internalID: 6448381345748232300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black2x_1
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 651
+        width: 101
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5fe30d7d6b9a7f41905e92a88c09c19
+      internalID: 3104775568578483705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black2x_2
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 651
+        width: 78
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2dc0cb5caab5da4d86e44b8de929dff
+      internalID: -1072778537851804836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black2x_3
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 651
+        width: 79
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7f009f6ac24d46418cbe2d1a26da0e4
+      internalID: 7517877831836505314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black2x_4
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 651
+        width: 101
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ffc8b58f53908541ba98755d1ebbe56
+      internalID: 741724495492301002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black2x_5
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 651
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c45ee74bd57a4df4399f852daf74aaee
+      internalID: 2794002852894749552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black2x_6
+      rect:
+        serializedVersion: 2
+        x: 637
+        y: 651
+        width: 101
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45880d0b49c1c6b4faad511b06b77ea6
+      internalID: -1904773174619451280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black2x_7
+      rect:
+        serializedVersion: 2
+        x: 753
+        y: 651
+        width: 101
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51f67088a5f0efa478ccd8bedb8e04df
+      internalID: 6563596809312459147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black2x_8
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 530
+        width: 101
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c50fe6bc84928974a84ddb801d3b9c64
+      internalID: -5793911923633815571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black2x_9
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 530
+        width: 120
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8d6519102dddfb4a9de36700e00adaa
+      internalID: -3525252087547506734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black2x_10
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 530
+        width: 152
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b568230961350234eabf7cd69b370e72
+      internalID: 7515140147507265658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black2x_11
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 530
+        width: 151
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 622d037dcef25994184545cc1e7bf5b1
+      internalID: 1612834542481446370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black2x_12
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 530
+        width: 100
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98f52410bb0571e41b40a08e7c6d7fa4
+      internalID: 6591624450832049452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black2x_13
+      rect:
+        serializedVersion: 2
+        x: 706
+        y: 553
+        width: 101
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5007c1892930cd84aa9b0744765d5459
+      internalID: -3402807095840391635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black2x_14
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 553
+        width: 101
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f94e8209429fc449b79b55b88fc2307
+      internalID: -5351474885038905916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black2x_15
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 395
+        width: 74
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bdb59cbb928b6449b92b4db81f0b842
+      internalID: -5540622708279498662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black2x_16
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 395
+        width: 26
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e311e92247449a54fbba3353427b49ab
+      internalID: -6732015995888224893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black2x_17
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 395
+        width: 80
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ca7dc9ea7f55a64283210be75b91cc6
+      internalID: 1116297725969662633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black2x_18
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 395
+        width: 79
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84baf15b1818bf14193cd562201ee7be
+      internalID: -7528385929800019065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black2x_19
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 395
+        width: 151
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b618d16433269d14ba7a47e24d55854e
+      internalID: 7640565205797364103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black2x_20
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 395
+        width: 101
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5476c03449c7fbd49a5d8de7bccb8204
+      internalID: -1277875912610310624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black2x_21
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 395
+        width: 101
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f54f4774dfdf6724785ab9f7fa2d44ce
+      internalID: 5917707244972836556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black2x_22
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 395
+        width: 101
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 773ba8bdbaea70f4e916ac5b91d07def
+      internalID: 5643596768328442597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black2x_23
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 395
+        width: 101
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dee7eed2a33a914ea44ab467c31536e
+      internalID: -4199962872558052763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black2x_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 251
+        width: 90
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af0e8445da1a80f4fb2923f2caf1596d
+      internalID: -6908917398599623031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black2x_26
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 251
+        width: 90
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 788453fb982c0984983ae3c9ebf984d9
+      internalID: -4965228747653756032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black2x_28
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 251
+        width: 59
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1629286d7bdd656449eef15e47541ed1
+      internalID: 2936659879688759796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black2x_29
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 251
+        width: 45
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbcb1dfef40bcc34d884f7d6e8f0a262
+      internalID: -2909618469944619800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black2x_30
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 251
+        width: 130
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac9bfc08c5a65a04dabfd25a90bf7754
+      internalID: 551859478630716874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black2x_31
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 251
+        width: 131
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c324a75ea1a8af64688cf323dc4b9136
+      internalID: -491810237175613875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black2x_32
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 251
+        width: 78
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aafcd3cfe78e8664a9995fba11cabc3a
+      internalID: 39456735454221293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black2x_33
+      rect:
+        serializedVersion: 2
+        x: 707
+        y: 251
+        width: 78
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 633fb14c63c474c45bca02f4a476d572
+      internalID: -3113440118180666127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black2x_34
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 251
+        width: 101
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 426c88beef3b61b478b495495e16196a
+      internalID: 302565717042022753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black2x_35
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 120
+        width: 101
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 557bb206f26d7644cbecbe07f07c5125
+      internalID: 2468588267713969981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black2x_38
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 120
+        width: 101
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7385988f92e0da44893d8fc5c36dbb33
+      internalID: -3969030138277377469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black2x_39
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 120
+        width: 101
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 220d06d0cfe3a68449792bf4f16a593a
+      internalID: -7081022391463662619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black2x_41
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 120
+        width: 101
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61a2aa8654eaf7a46abb4ba66136ca9c
+      internalID: 2199783425240829092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black2x_42
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 120
+        width: 100
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e94344cb0a65b7c409aef1c93cfcbd00
+      internalID: 5764833935122790829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black2x_43
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 201
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa00834b41586c74f905cf99c56311e0
+      internalID: 579690501015620115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black2x_44
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 120
+        width: 26
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4931336e21437914daf09c2c4896a582
+      internalID: -1938351030408837736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black2x_45
+      rect:
+        serializedVersion: 2
+        x: 776
+        y: 120
+        width: 64
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 316aac2776750f4489e0bd4274b17fc9
+      internalID: 4620612583541898968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black2x_46
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 120
+        width: 100
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b49c3b837b25cfa4e815d8813cf8b0d7
+      internalID: 9198122902432847940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black2x_53
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 120
+        width: 38
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b4b9241a26aa53438552ccf4f391230
+      internalID: -8386401520296994190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black2x_56
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 120
+        width: 26
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d951b1fce21014409270fca05f2c0af
+      internalID: -4093792447665749469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black2x_57
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 120
+        width: 101
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e781c3ddf29bc6f4795e564a662b28e7
+      internalID: -5781231456088490531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black2x_59
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 120
+        width: 71
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a57f1c12b0facd4baf5d83d0f750814
+      internalID: -5255671426704070178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black2x_60
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 120
+        width: 26
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f485892cb8a3694596550b0484cfdd5
+      internalID: 892886811337495973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black2x_61
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 120
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd3f4e0751a66a14c8bd212c7333feea
+      internalID: -792637445488073782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black2x_62
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 0
+        width: 88
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca03ca25d00e06a489eccc143f7c5f28
+      internalID: 6335018408645323544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black2x_63
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 15
+        width: 21
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c67defd0dd6b16b46aefed1785d0acdb
+      internalID: -674758443137215436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black2x_64
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 0
+        width: 60
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f2687904d2785046911dcb59701ae1f
+      internalID: 6430071835499979539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black2x_65
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 0
+        width: 54
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d82790c901818a4eb7299622c06558b
+      internalID: -2654130275358639256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black2x_66
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 0
+        width: 54
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 999bd38d25ab97c499ff5dd8ef20da86
+      internalID: -1983585346726937148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black2x_67
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 0
+        width: 101
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bbbe38162bc3214086faee73c89af1f
+      internalID: -217892132308087590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black2x_68
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88295781ed9080d4c86306126480c212
+      internalID: 2291293136659689264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

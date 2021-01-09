@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="94769814-472c-42a4-b1e7-efd7b1b206ad" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/61C38E65-0D15-4671-8A5E-B044D75F08EF/f1/85413f3a/IDragHandler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/04857EBA-836E-4A56-A0D2-35B3679CB299/07/31050049/IEventSystemHandler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../HyperCasual_Base/Assets/Scripts/Game/GameController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/04857EBA-836E-4A56-A0D2-35B3679CB299/d3/2cca1f5d/IPointerDownHandler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/48050808-8AEE-40CA-B708-18FF164A29D5/93/d6e743d9/GameObject.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/61C38E65-0D15-4671-8A5E-B044D75F08EF/1b/c0ebe3b3/IPointerDownHandler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/04857EBA-836E-4A56-A0D2-35B3679CB299/66/3e6b37f1/IPointerUpHandler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/58A4DD82-307E-4998-A93E-7F385E72C68B/cf/c4abedbf/DOTween.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/04857EBA-836E-4A56-A0D2-35B3679CB299/9a/ac749e34/IDragHandler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/61C38E65-0D15-4671-8A5E-B044D75F08EF/83/c672b752/IPointerUpHandler.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/Scripts/Tetris/GameLogic/DevScripts/GameLogicScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Base/BaseGameController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Base/Sound/SoundManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Tetris/PlayerManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Base/BaseMenuManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Tetris/Field/ObjectField.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Tetris/Field/PlayField.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Tetris/PlayFieldManager.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="ProjectId" id="1jVuTJ5W19mCV2jYAxtSsy7oXqu" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="reference.idesettings.debugger.python" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="selectedOptions">
+        <set />
+      </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="selectedOptions">
+        <set />
+      </option>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="94769814-472c-42a4-b1e7-efd7b1b206ad" name="Default Changelist" comment="" />
+      <created>1603901589410</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1603901589410</updated>
+      <workItem from="1603901597521" duration="6053000" />
+      <workItem from="1603983613902" duration="595000" />
+      <workItem from="1604015713940" duration="3461000" />
+      <workItem from="1604051113945" duration="15721000" />
+      <workItem from="1604176384303" duration="4870000" />
+      <workItem from="1604233297890" duration="2158000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="627" y="253" width="666" height="534" key="find.popup" timestamp="1603905256667">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="627" y="253" width="666" height="534" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1603905256667" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1604018130057">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1604018130057" />
+  </component>
+</project>
