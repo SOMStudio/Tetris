@@ -109,7 +109,7 @@ namespace Tetris
 
         public bool CanRotate => canRotate;
 
-        public void SetObject(string name,Dictionary<PointField, bool> objectSet, Vector2Int objectSize)
+        public void SetObject(string name, Dictionary<PointField, bool> objectSet, Vector2Int objectSize)
         {
             this.name = name;
             objectField = objectSet;
