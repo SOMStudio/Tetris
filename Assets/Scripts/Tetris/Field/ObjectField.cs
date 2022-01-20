@@ -79,7 +79,7 @@ namespace Tetris
             return new ObjectField("Cube", objectSet, new Vector2Int(2, 2), new Vector2Int(1, 1), false);
         }
 
-        public static ObjectField Tringle()
+        public static ObjectField Triangle()
         {
             var objectSet = new Dictionary<PointField, bool>();
             objectSet.Add(new PointField(0,0), true);
@@ -87,10 +87,10 @@ namespace Tetris
             objectSet.Add(new PointField(2,0), true);
             objectSet.Add(new PointField(1,1), true);
             
-            return new ObjectField("Tringle", objectSet, new Vector2Int(3, 2), new Vector2Int(1, 0));
+            return new ObjectField("Triangle", objectSet, new Vector2Int(3, 2), new Vector2Int(1, 0));
         }
 
-        private static ObjectField[] objectList = new ObjectField[7] {LightningLeftRight(), LightningRightLeft(), HookToLeft(), HookToRight(), Line(), Cube(), Tringle()};
+        private static ObjectField[] objectList = new ObjectField[7] {LightningLeftRight(), LightningRightLeft(), HookToLeft(), HookToRight(), Line(), Cube(), Triangle()};
 
         public static ObjectField GetRandomObject()
         {
