@@ -36,11 +36,16 @@ namespace Tetris.GameLogic.DevScripts
         public override void CheckLocalTask(GameObject obj, EventArgs args = null)
         {
             EvenArgsReward argsReward = (EvenArgsReward) args;
-            int bonusRes = argsReward.countLine * gameData.BonusForItem;
+            int bonusRes = CalculateBonusCount(argsReward.countLine);
 
             UserManager.Instance.AddScore(bonusRes);
 
             gameController.CheckLocalTask(bonusRes);
+        }
+
+        private int CalculateBonusCount(int countLineReduce)
+        {
+            return (countLineReduce + Mathf.FloorToInt(countLineReduce / 2)) * gameData.BonusForItem; ;
         }
 
         public override void CheckGlobalTask()
