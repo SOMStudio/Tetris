@@ -77,9 +77,10 @@ namespace Tetris
                 gameData = (GameData.DevScripts.GameData)gameController.GameData.Data;
                 gameLogicScript = (GameLogicScript)gameController.GameLogicScript.Script;
 
-                timeManager.startControlEvent.AddListener(playFieldManager.MobileControl);
+                timeManager.controlEvent.AddListener(playFieldManager.MobileControl);
                 timeManager.dropEvent.AddListener(playFieldManager.ObjectMoveDown);
                 timeManager.reduceDropEvent.AddListener(ReduceDropStep);
+                timeManager.waveChangeEvent.AddListener(ChangeWave);
 
                 playFieldManager.updateNextDropObjectListEvent += dropObjectManagerUi.SetDropObjectList;
                 playFieldManager.SetDestroyRayCountListener(CatchLevelReward);
@@ -199,7 +200,12 @@ namespace Tetris
 
         private void ReduceDropStep()
         {
-            MenuManager.Instance.ShowAdviceGameWindow("Time drop object wos reduced");
+            MenuManager.Instance.ShowAdviceGameWindow("Time drop object was reduced!");
+        }
+
+        private void ChangeWave()
+        {
+            MenuManager.Instance.ShowAdviceGameWindow("Start new wave!");
         }
     }
 

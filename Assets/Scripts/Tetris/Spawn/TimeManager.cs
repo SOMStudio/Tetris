@@ -9,8 +9,8 @@ public class TimeManager : MonoBehaviour
 {
     [Header("Settings")]
     [SerializeField]
-    private float delayTime = 0.25f;
-    private float timeDelayCheck = .0f;
+    private float controlTime = 0.25f;
+    private float timeControlCheck = .0f;
     
     [SerializeField]
     private float dropStep = 1.0f;
@@ -22,14 +22,21 @@ public class TimeManager : MonoBehaviour
     private float reduceDropStepMagnitude = .05f;
     private float timeReduceDropCheck = .0f;
 
+    [SerializeField]
+    private float waveLengthPeriad = 5 * 60.0f;
+    [SerializeField]
+    private int numberWave = 1;
+    private float timeChangeWaveCheck = .0f;
+
     private GameData gameData;
     
     private TimerClass timer;
 
     [Header("Events")]
-    public UnityEvent startControlEvent;
+    public UnityEvent controlEvent;
     public UnityEvent dropEvent;
     public UnityEvent reduceDropEvent;
+    public UnityEvent waveChangeEvent;
 
     private void Start()
     {
@@ -43,37 +50,45 @@ public class TimeManager : MonoBehaviour
 
     private void Init()
     {
-        delayTime = gameData.ControlStep;
+        controlTime = gameData.ControlStep;
         dropStep = gameData.DropStep;
         reduceDropStepPeriod = gameData.ReduceDropStepPeriod;
         reduceDropStepMagnitude = gameData.ReduceDropStepMagnitude;
-        
-        timeDelayCheck += delayTime;
+        waveLengthPeriad = gameData.GetWaveLength(numberWave);
+
+        timeControlCheck += controlTime;
         timeDropCheck += dropStep;
         timeReduceDropCheck += reduceDropStepPeriod;
+        timeChangeWaveCheck += waveLengthPeriad;
     }
 
     private void Reset()
     {
-        timeDelayCheck = .0f;
+        timeControlCheck = .0f;
         timeDropCheck = .0f;
         timeReduceDropCheck = .0f;
+        numberWave = 1;
 
         Init();
+    }
+
+    private void ChangeWave()
+    {
+        dropStep = gameData.DropStep;
     }
     
     private void Update()
     {
         timer.UpdateTimer();
 
-        if (timer.GetTime() >= timeDelayCheck)
+        if (timer.GetTime() >= timeControlCheck)
         {
-            timeDelayCheck += delayTime;
+            timeControlCheck += controlTime;
             
-            startControlEvent?.Invoke();
+            controlEvent?.Invoke();
         }
 
-        if (timer.GetTime() >= timeReduceDropCheck)
+        if (timer.GetTime() >= timeReduceDropCheck && dropStep >= controlTime)
         {
             dropStep -= reduceDropStepMagnitude;
             
@@ -87,6 +102,17 @@ public class TimeManager : MonoBehaviour
             timeDropCheck += dropStep;
             
             dropEvent?.Invoke();
+        }
+
+        if (timer.GetTime() >= timeChangeWaveCheck)
+        {
+            numberWave++;
+
+            timeChangeWaveCheck += gameData.GetWaveLength(numberWave);
+
+            ChangeWave();
+
+            waveChangeEvent?.Invoke();
         }
     }
 

@@ -21,6 +21,10 @@ namespace Tetris.GameData.DevScripts
         [SerializeField]
         private float reduceDropStepMagnitude = 0.05f;
 
+        [Header("Wave")]
+        [SerializeField]
+        private float magnitudeWavePeriod = 5 * 60.0f;
+
         public Color GetDropObjectColor(int index)
         {
             return colorList[index];
@@ -37,6 +41,11 @@ namespace Tetris.GameData.DevScripts
         public float ReduceDropStepPeriod => reduceDropStepPeriod;
 
         public float ReduceDropStepMagnitude => reduceDropStepMagnitude;
+
+        public float GetWaveLength(int numberWave)
+        {
+            return numberWave * magnitudeWavePeriod;
+        }
 
         public string GetStringTask()
         {
