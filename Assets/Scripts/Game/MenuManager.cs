@@ -1,11 +1,10 @@
 ﻿using Base;
 using Base.Sound;
+using Base.UI.HudPanel;
 using Base.Utility;
 using Game.Menu;
 using Game.SaveSystem;
-using Tetris;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.UI;
 
 namespace Game
@@ -26,6 +25,9 @@ namespace Game
         [Header("Control panel")]
         [SerializeField] private int numberGameWindowControlPanel = -1;
 
+        [Header("HUD panel")]
+        [SerializeField] private HudLifeScoreManager hudManager;
+
         private SingletonComposition<MenuManager> _singletonComponent;
         
         private bool _cursorIsOverGameUi = false;
@@ -43,6 +45,8 @@ namespace Game
         {
             InitMenu();
         }
+
+        public HudLifeScoreManager HudManager => hudManager;
 
         private void LateUpdate()
         {

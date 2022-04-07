@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data:
     delayForWinMessage: 1
-    activeLevel: 0
+    activeLevel: -1
     bunusForItem: 10
     defaulValume: 0.5
     colorList:
@@ -28,5 +28,6 @@ MonoBehaviour:
     - {r: 0.5839706, g: 1, b: 0.3160377, a: 0}
     controlStep: 0.25
     dropStep: 1
-    reduceDropStepPeriod: 60
+    reduceDropStepPeriod: 30
     reduceDropStepMagnitude: 0.05
+    magnitudeWavePeriod: 150

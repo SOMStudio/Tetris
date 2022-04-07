@@ -653,17 +653,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8fb71ed08b4a37408b1768fc64846ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delayTime: 0.5
+  controlTime: 0.25
   dropStep: 1
   reduceDropStepPeriod: 60
   reduceDropStepMagnitude: 0.05
-  startControlEvent:
+  waveLengthPeriad: 300
+  numberWave: 1
+  controlEvent:
     m_PersistentCalls:
       m_Calls: []
   dropEvent:
     m_PersistentCalls:
       m_Calls: []
   reduceDropEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  waveChangeEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &593819998
@@ -5469,6 +5474,11 @@ PrefabInstance:
       propertyPath: limitCountSymbolForUseSmallWindow
       value: 40
       objectReference: {fileID: 0}
+    - target: {fileID: 7756807689510360229, guid: 3044460963cb0ba4892bc52dcb0c22fe,
+        type: 3}
+      propertyPath: hudManager
+      value: 
+      objectReference: {fileID: 331411664}
     - target: {fileID: 7756807689628123270, guid: 3044460963cb0ba4892bc52dcb0c22fe,
         type: 3}
       propertyPath: m_AnchorMin.y
