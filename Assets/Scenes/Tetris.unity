@@ -653,12 +653,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8fb71ed08b4a37408b1768fc64846ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controlTime: 0.25
-  dropStep: 1
-  reduceDropStepPeriod: 60
-  reduceDropStepMagnitude: 0.05
-  waveLengthPeriad: 300
-  numberWave: 1
   controlEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -3415,7 +3409,7 @@ MonoBehaviour:
   nameOfYourPool: ObjectPoints
   yourPoolPrefab: {fileID: 7095745608351333472, guid: fbfa4b8765f303143a4b69138260ab1f,
     type: 3}
-  initialObjectCounter: 50
+  initialObjectCounter: 200
   setParentThisObject: 1
   setActiveRecursively: 0
   useAdjustLiberate: 0
