@@ -14,6 +14,8 @@ namespace Game
 
         private SingletonComposition<GameController> _singletonComponent;
 
+        private bool showStartMessage = true;
+
         private IMainMenu mainMenu;
         private IGameMenu gameMenu;
         private BaseUserManager userManager;
@@ -74,6 +76,7 @@ namespace Game
             base.StopLevel();
 
             GameData.Data.ActiveLevel = -1;
+            showStartMessage = true;
         }
 
         public override void CheckLifePlayer(int life)
@@ -101,7 +104,13 @@ namespace Game
                 if (percentage > 10)
                     gameMenu?.ShowAdviceGameWindow("You so cool!");
                 else
-                    gameMenu?.ShowAdviceGameWindow("Yes!");
+                {
+                    if (showStartMessage)
+                    {
+                        showStartMessage = false;
+                        gameMenu?.ShowAdviceGameWindow("Yes, continue it!");
+                    }
+                }
             }
             else
             {
