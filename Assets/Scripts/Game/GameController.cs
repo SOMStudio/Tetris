@@ -91,7 +91,7 @@ namespace Game
                 else
                     action = () => mainMenu?.OpenMenu();
 
-                mainMenu?.ConsoleWinMessage_Show("Game over!", action);
+                mainMenu?.ConsoleWinMessage_Show($"Game over!\nWave:{UserManager.Instance.GetWave()}\nScore:{UserManager.Instance.GetScore()}", action);
             }
         }
 

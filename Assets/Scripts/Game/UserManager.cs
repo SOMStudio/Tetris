@@ -1,4 +1,5 @@
 ﻿using Base;
+using Base.Resource;
 using Base.SaveSystem;
 using Base.SaveSystem.Interfaces;
 using Base.Utility;
@@ -10,6 +11,7 @@ namespace Game
 	{
 		[Header("Main")]
 		[SerializeField] private bool useDontDestroy = true;
+		[SerializeField] protected IntResource wave;
 
 		private ISaveSystem _fileSaveSystem;
 
@@ -48,6 +50,13 @@ namespace Game
 
 				health.AddListener(gameController.CheckLifePlayer);
 			}
+		}
+
+		public override void GetDefaultData()
+		{
+			base.GetDefaultData();
+
+			wave.Set(0);
 		}
 
 		public void VisitLevel(int value)
@@ -96,6 +105,24 @@ namespace Game
 		private void ResetHighScoreShowFlag()
 		{
 			_highScoreShowInLevel = false;
+		}
+
+		public void SetWave(int value, bool withEvent = false)
+		{
+			if (withEvent)
+				wave.Change(value);
+			else
+				wave.Set(value);
+		}
+		
+		public void AddWave()
+		{
+			wave.Add(1);
+		}
+
+		public int GetWave()
+		{
+			return wave.Get();
 		}
 
 		/// <summary>

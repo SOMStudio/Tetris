@@ -205,7 +205,7 @@ namespace Tetris
 
         private void ChangeWave()
         {
-            MenuManager.Instance.HudManager.UpdateLeftText(timeManager.NumberWave);
+            UserManager.Instance.AddWave();
             MenuManager.Instance.ShowAdviceGameWindow("Start new wave!");
         }
     }

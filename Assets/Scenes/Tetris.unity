@@ -818,12 +818,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 972988932960543933, guid: 0f0788cc0f7d7ec4a9564ffb7edf46d4,
         type: 3}
-      propertyPath: score.changeEvent.m_PersistentCalls.m_Calls.Array.size
+      propertyPath: wave.changeEvent.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 972988932960543933, guid: 0f0788cc0f7d7ec4a9564ffb7edf46d4,
         type: 3}
-      propertyPath: health.changeEvent.m_PersistentCalls.m_Calls.Array.size
+      propertyPath: score.changeEvent.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 972988932960543933, guid: 0f0788cc0f7d7ec4a9564ffb7edf46d4,
@@ -833,22 +833,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 972988932960543933, guid: 0f0788cc0f7d7ec4a9564ffb7edf46d4,
         type: 3}
+      propertyPath: wave.changeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 972988932960543933, guid: 0f0788cc0f7d7ec4a9564ffb7edf46d4,
+        type: 3}
       propertyPath: score.changeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 972988932960543933, guid: 0f0788cc0f7d7ec4a9564ffb7edf46d4,
         type: 3}
-      propertyPath: health.changeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 972988932960543933, guid: 0f0788cc0f7d7ec4a9564ffb7edf46d4,
-        type: 3}
-      propertyPath: score.changeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      propertyPath: wave.changeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 331411664}
     - target: {fileID: 972988932960543933, guid: 0f0788cc0f7d7ec4a9564ffb7edf46d4,
         type: 3}
-      propertyPath: health.changeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      propertyPath: score.changeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 331411664}
     - target: {fileID: 972988932960543933, guid: 0f0788cc0f7d7ec4a9564ffb7edf46d4,
@@ -863,13 +863,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 972988932960543933, guid: 0f0788cc0f7d7ec4a9564ffb7edf46d4,
         type: 3}
+      propertyPath: wave.changeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 972988932960543933, guid: 0f0788cc0f7d7ec4a9564ffb7edf46d4,
+        type: 3}
       propertyPath: score.changeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 972988932960543933, guid: 0f0788cc0f7d7ec4a9564ffb7edf46d4,
         type: 3}
-      propertyPath: health.changeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
+      propertyPath: wave.changeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UpdateLeftText
       objectReference: {fileID: 0}
     - target: {fileID: 972988932960543933, guid: 0f0788cc0f7d7ec4a9564ffb7edf46d4,
         type: 3}
@@ -889,11 +894,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 972988932960543933, guid: 0f0788cc0f7d7ec4a9564ffb7edf46d4,
         type: 3}
-      propertyPath: health.changeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: UpdateLeftText
-      objectReference: {fileID: 0}
-    - target: {fileID: 972988932960543933, guid: 0f0788cc0f7d7ec4a9564ffb7edf46d4,
-        type: 3}
       propertyPath: highScore.changeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
@@ -909,12 +909,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 972988932960543933, guid: 0f0788cc0f7d7ec4a9564ffb7edf46d4,
         type: 3}
-      propertyPath: score.changeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      propertyPath: wave.changeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 972988932960543933, guid: 0f0788cc0f7d7ec4a9564ffb7edf46d4,
         type: 3}
-      propertyPath: health.changeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      propertyPath: score.changeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 972988932960543933, guid: 0f0788cc0f7d7ec4a9564ffb7edf46d4,

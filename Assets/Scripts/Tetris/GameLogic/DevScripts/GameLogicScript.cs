@@ -31,6 +31,7 @@ namespace Tetris.GameLogic.DevScripts
 
             UserManager.Instance.SetHealth(1, true);
             UserManager.Instance.SetScore(0, true);
+            UserManager.Instance.SetWave(1, true);
         }
 
         public override void CheckLocalTask(GameObject obj, EventArgs args = null)
