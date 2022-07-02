@@ -33,6 +33,8 @@ namespace Tetris
             spawnPoint = new Vector2Int(newSize.x/2, newSize.y);
         }
 
+        public bool IsEmpty => objectField == null && playField.Count == 0;
+        
         public void Clear()
         {
             objectField = null;

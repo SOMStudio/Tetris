@@ -71,14 +71,17 @@ namespace Tetris
 
         public void Clear()
         {
-            playField.Clear();
-            
-            foreach (var point in pointList)
+            if (!playField.IsEmpty)
             {
-                objectPool.LiberationObject(point.Value.transform);
+                playField.Clear();
+
+                foreach (var point in pointList)
+                {
+                    objectPool.LiberationObject(point.Value.transform);
+                }
+
+                pointList.Clear();
             }
-            
-            pointList.Clear();
         }
 
         public void MobileControl()

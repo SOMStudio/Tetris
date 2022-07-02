@@ -146,9 +146,7 @@ namespace Tetris
             startLevel = false;
             
             timeManager.StopTime();
-            
-            playFieldManager.Clear();
-            
+
             MenuManager.Instance.GameRightPanelClose();
         }
 
@@ -165,6 +163,8 @@ namespace Tetris
 
         private void ActivateLevel(int number)
         {
+            PlayFieldManager.Clear();
+                
             gameLogicScript.InitLevelRules(this);
 
             string stRules = gameData.GetStringTask();
