@@ -292,5 +292,10 @@ namespace Game
                     , () => GameController.Instance.RunLevel());
             }
         }
+
+        public void FirmInformation_Button()
+        {
+            ConsoleWinMessage_Show("SOM Studio");
+        }
     }
 }
