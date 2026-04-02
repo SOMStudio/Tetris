@@ -168,7 +168,7 @@ TextureImporter:
       213: 2291293136659689264
     second: Black2x_68
   externalObjects: {}
-  serializedVersion: 10
+  serializedVersion: 13
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -185,9 +185,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -196,12 +199,12 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
-    wrapW: -1
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -219,9 +222,15 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -233,6 +242,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -245,6 +255,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -257,6 +268,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -1427,9 +1439,64 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-  spritePackingTag: 
+    nameFileIdTable:
+      Black2x_0: 6448381345748232300
+      Black2x_1: 3104775568578483705
+      Black2x_10: 7515140147507265658
+      Black2x_11: 1612834542481446370
+      Black2x_12: 6591624450832049452
+      Black2x_13: -3402807095840391635
+      Black2x_14: -5351474885038905916
+      Black2x_15: -5540622708279498662
+      Black2x_16: -6732015995888224893
+      Black2x_17: 1116297725969662633
+      Black2x_18: -7528385929800019065
+      Black2x_19: 7640565205797364103
+      Black2x_2: -1072778537851804836
+      Black2x_20: -1277875912610310624
+      Black2x_21: 5917707244972836556
+      Black2x_22: 5643596768328442597
+      Black2x_23: -4199962872558052763
+      Black2x_24: -6908917398599623031
+      Black2x_26: -4965228747653756032
+      Black2x_28: 2936659879688759796
+      Black2x_29: -2909618469944619800
+      Black2x_3: 7517877831836505314
+      Black2x_30: 551859478630716874
+      Black2x_31: -491810237175613875
+      Black2x_32: 39456735454221293
+      Black2x_33: -3113440118180666127
+      Black2x_34: 302565717042022753
+      Black2x_35: 2468588267713969981
+      Black2x_38: -3969030138277377469
+      Black2x_39: -7081022391463662619
+      Black2x_4: 741724495492301002
+      Black2x_41: 2199783425240829092
+      Black2x_42: 5764833935122790829
+      Black2x_43: 579690501015620115
+      Black2x_44: -1938351030408837736
+      Black2x_45: 4620612583541898968
+      Black2x_46: 9198122902432847940
+      Black2x_5: 2794002852894749552
+      Black2x_53: -8386401520296994190
+      Black2x_56: -4093792447665749469
+      Black2x_57: -5781231456088490531
+      Black2x_59: -5255671426704070178
+      Black2x_6: -1904773174619451280
+      Black2x_60: 892886811337495973
+      Black2x_61: -792637445488073782
+      Black2x_62: 6335018408645323544
+      Black2x_63: -674758443137215436
+      Black2x_64: 6430071835499979539
+      Black2x_65: -2654130275358639256
+      Black2x_66: -1983585346726937148
+      Black2x_67: -217892132308087590
+      Black2x_68: 2291293136659689264
+      Black2x_7: 6563596809312459147
+      Black2x_8: -5793911923633815571
+      Black2x_9: -3525252087547506734
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
