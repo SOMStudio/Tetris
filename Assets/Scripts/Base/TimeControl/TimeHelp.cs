@@ -51,11 +51,7 @@
 
 			return mills;
 		}
-
-		/// <summary>
-		/// Gets the formatted time (MM:SS:MS).
-		/// </summary>
-		/// <returns>The formatted time.</returns>
+		
 		public static string GetFormattedTime(float time, string format = "MM:SS:MS")
 		{
 			string res = format;

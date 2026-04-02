@@ -2,7 +2,6 @@
 using Base;
 using Base.Optimization;
 using Base.Utility;
-using Tetris.GameData.DevScripts;
 using Tetris.GameLogic.DevScripts;
 using Game;
 using Game.Menu;
@@ -37,8 +36,8 @@ namespace Tetris
         private GameData.DevScripts.GameData gameData;
         private GameLogicScript gameLogicScript;
 
-        private bool startLevel = false;
-        private bool pauseLevel = false;
+        private bool startLevel;
+        private bool pauseLevel;
 
         private SingletonComposition<LevelManager> singletonComponent;
         

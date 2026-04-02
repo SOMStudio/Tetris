@@ -31,9 +31,9 @@ namespace Base
 		[SerializeField] private int numberConsoleWinYesNo = -1;
 		[SerializeField] private TMP_Text consoleWinYesNoTextHead;
 
-		private readonly UnityEvent consoleWinMessageActionOk = new UnityEvent();
-		private readonly UnityEvent consoleWinYesNoActionYes = new UnityEvent();
-		private readonly UnityEvent consoleWinYesNoActionNo = new UnityEvent();
+		private readonly UnityEvent consoleWinMessageActionOk = new();
+		private readonly UnityEvent consoleWinYesNoActionYes = new();
+		private readonly UnityEvent consoleWinYesNoActionNo = new();
 
 		[Header("Game Windows")]
 		[SerializeField] private int numberGameWindowHud = -1;
@@ -70,7 +70,6 @@ namespace Base
 		}
 
 		#region Activators
-		//activators
 		protected void WindowActivator_Open(int number)
 		{
 			if ((number >= 0) && (number < windowActivator.Length))
@@ -102,8 +101,7 @@ namespace Base
 				}
 			}
 		}
-
-		//blocker windows activator 
+		
 		private void WindowBlocker_Open()
 		{
 			if (numberWindowBlocker >= 0)
@@ -119,8 +117,7 @@ namespace Base
 				WindowActivator_Close(numberWindowBlocker);
 			}
 		}
-
-		//blocker console Windows activator
+		
 		private void ConsoleWindowBlocker_Open()
 		{
 			if (numberConsoleWindowBlocker >= 0)
@@ -139,67 +136,31 @@ namespace Base
 		#endregion
 
 		#region Events
-		protected virtual void ActivateWindowEvent()
-		{
+		protected virtual void ActivateWindowEvent() { }
 
-		}
+		protected virtual void DisActivateWindowEvent() { }
 
-		protected virtual void DisActivateWindowEvent()
-		{
+		protected virtual void ChangeWindowEvent(int number) { }
 
-		}
+		protected virtual void ActivateConsoleWEvent() { }
 
-		protected virtual void ChangeWindowEvent(int number)
-		{
+		protected virtual void DisActivateConsoleWEvent() { }
 
-		}
-
-		protected virtual void ActivateConsoleWEvent()
-		{
-
-		}
-
-		protected virtual void DisActivateConsoleWEvent()
-		{
-
-		}
-
-		protected virtual void ChangeConsoleWEvent(int number)
-		{
-
-		}
+		protected virtual void ChangeConsoleWEvent(int number) { }
 		
-		protected virtual void ActivateGameWEvent()
-		{
+		protected virtual void ActivateGameWEvent() { }
 
-		}
+		protected virtual void DisActivateGameWEvent() { }
 
-		protected virtual void DisActivateGameWEvent()
-		{
+		protected virtual void ChangeGameWEvent(bool isActive) { }
 
-		}
-
-		protected virtual void ChangeGameWEvent(bool isActive)
-		{
-
-		}
-
-		protected virtual void ActivateAdviceGameWEvent()
-		{
-			
-		}
+		protected virtual void ActivateAdviceGameWEvent() { }
 		
-		protected virtual void DisActivateAdviceGameWEvent()
-		{
-			
-		}
+		protected virtual void DisActivateAdviceGameWEvent() { }
 		#endregion
 
 		#region Windows
-		public int WindowActive
-		{
-			get { return windowActive; }
-		}
+		public int WindowActive => windowActive;
 
 		public void ActivateWindow(int number)
 		{
@@ -289,7 +250,6 @@ namespace Base
 			ConsoleWindowBlocker_Close();
 		}
 		
-		//console Message
 		private void ConsoleWinMessageSmall_SetTxt(string val)
 		{
 			consoleWinMessageSmallTextHead.text = TextHelp.SpecTextChar(val);
@@ -335,8 +295,7 @@ namespace Base
 
 			ActivateConsoleWindow(useSmallWindow ? numberConsoleWinMessageSmall : numberConsoleWinMessageBig);
 		}
-
-		//console YesNo
+		
 		private void ConsoleWinYesNo_SetTxt(string val)
 		{
 			consoleWinYesNoTextHead.text = TextHelp.SpecTextChar(val);
@@ -422,7 +381,6 @@ namespace Base
 			}
 		}
 		
-		//game window Advice
 		private void CloseAdviceGameWindow()
 		{
 			WindowActivator_Close(numberGameWindowAdvice);

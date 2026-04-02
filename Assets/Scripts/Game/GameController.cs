@@ -124,7 +124,7 @@ namespace Game
             
             if (percentage == 100)
             {
-                Invoke(nameof(WinMessage), GameData.Data.DelayelayForWinMessage);
+                Invoke(nameof(WinMessage), GameData.Data.DelayForWinMessage);
             }
         }
         #endregion

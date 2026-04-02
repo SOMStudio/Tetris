@@ -25,7 +25,7 @@ namespace Base.Sound
 			}
 		}
 
-		void Init()
+		private void Init()
 		{
 			string stKey = string.Format("{0}_SFXVol", gamePrefsName);
 			if (PlayerPrefs.HasKey(stKey))
@@ -60,7 +60,7 @@ namespace Base.Sound
 				Init();
 			}
 
-			string stKey = string.Format("{0}_SFXVol", gamePrefsName);
+			string stKey = $"{gamePrefsName}_SFXVol";
 			volume = PlayerPrefs.GetFloat(stKey);
 
 			for (int i = 0; i < soundObjectList.Count; i++)

@@ -12,17 +12,17 @@ namespace Base.Data.GameData.DevScripts
         [SerializeField] private int bunusForItem = 10;
 
         [Header("Sound&Music")]
-        [SerializeField] private float defaulValume = 0.5f;
+        [SerializeField] private float defaulVolume = 0.5f;
 
-        public float DelayelayForWinMessage => delayForWinMessage;
+        public float DelayForWinMessage => delayForWinMessage;
 
         public int ActiveLevel {
-            get { return activeLevel; }
-            set { activeLevel = value; }
+            get => activeLevel;
+            set => activeLevel = value;
         }
 
         public int BonusForItem => bunusForItem;
 
-        public float DefaultValume => defaulValume;
+        public float DefaultVolume => defaulVolume;
     }
 }

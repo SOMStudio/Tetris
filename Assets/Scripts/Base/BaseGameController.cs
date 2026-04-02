@@ -58,7 +58,6 @@ namespace Base
 
 		protected virtual void StopGame()
 		{
-			
 		}
 
 		public GameObject GetPlayer(int value = 0)
@@ -78,7 +77,6 @@ namespace Base
 
 		protected virtual void EnemyDestroyed()
 		{
-
 		}
 
 		protected virtual void BossDestroyed()

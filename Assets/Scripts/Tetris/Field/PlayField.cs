@@ -12,7 +12,7 @@ namespace Tetris
         private Vector2Int size;
         private Vector2Int spawnPoint;
         
-        private Dictionary<PointField, bool> playField = new Dictionary<PointField, bool>();
+        private Dictionary<PointField, bool> playField = new();
         
         public ObjectField objectField;
         private Vector2Int positionObjectField;
@@ -75,10 +75,8 @@ namespace Tetris
 
         public ObjectField GetRandomDropObject()
         {
-            //random object
             var newDropObject = ObjectField.GetRandomObject();
-
-            //rotate random
+            
             int rotateCount = Random.Range(0, 4);
             for (int i = 0; i < rotateCount; i++)
             {

@@ -6,7 +6,7 @@ namespace Base.SaveSystem
 {
     public class BasePrefabSaveSystem : MonoBehaviour
     {
-        public bool didInit = false;
+        public bool didInit;
 
         [Header("Base Settings")] public string gamePrefsName = "DefaultGame";
         
@@ -26,7 +26,7 @@ namespace Base.SaveSystem
         private int detailLevels = 6;
         private bool needSaveOptions = false;
 
-        void Start()
+        private void Start()
         {
             RestoreOptionsPref();
             InitEvents();
@@ -50,7 +50,7 @@ namespace Base.SaveSystem
 
         private void RestoreSFXValue()
         {
-            string stKey = string.Format("{0}_SFXVol", gamePrefsName);
+            string stKey = $"{gamePrefsName}_SFXVol";
             if (PlayerPrefs.HasKey(stKey))
             {
                 audioSoundSliderValue = PlayerPrefs.GetFloat(stKey);
@@ -68,7 +68,7 @@ namespace Base.SaveSystem
 
         private void RestoreMusicValue()
         {
-            string stKey = string.Format("{0}_MusicVol", gamePrefsName);
+            string stKey = $"{gamePrefsName}_MusicVol";
             if (PlayerPrefs.HasKey(stKey))
             {
                 audioMusicSliderValue = PlayerPrefs.GetFloat(stKey);
@@ -86,7 +86,7 @@ namespace Base.SaveSystem
 
         private void RestoreGraphicsValue()
         {
-            string stKey = string.Format("{0}_GraphicsDetail", gamePrefsName);
+            string stKey = $"{gamePrefsName}_GraphicsDetail";
             if (PlayerPrefs.HasKey (stKey)) {
                 graphicsSliderValue = PlayerPrefs.GetFloat (stKey);
             } else {
@@ -138,19 +138,19 @@ namespace Base.SaveSystem
 
         private void SaveSoundValue()
         {
-            string stKey = string.Format("{0}_SFXVol", gamePrefsName);
+            string stKey = $"{gamePrefsName}_SFXVol";
             PlayerPrefs.SetFloat(stKey, audioSoundSliderValue);
         }
 
         private void SaveMusicValue()
         {
-            string stKey = string.Format("{0}_MusicVol", gamePrefsName);
+            string stKey = $"{gamePrefsName}_MusicVol";
             PlayerPrefs.SetFloat(stKey, audioMusicSliderValue);
         }
 
         private void SaveGraphicsValue()
         {
-            string stKey = string.Format("{0}_GraphicsDetail", gamePrefsName);
+            string stKey = $"{gamePrefsName}_GraphicsDetail";
             PlayerPrefs.SetFloat(stKey, graphicsSliderValue);
         }
 

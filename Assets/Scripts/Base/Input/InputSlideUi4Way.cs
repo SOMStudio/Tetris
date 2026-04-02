@@ -16,19 +16,14 @@ namespace Base.Input
 
 		private InputBindings inputBindings;
 		private IMouseInputHandler mouseInputHandler;
-		private Dictionary<string, UnityAction> actionMapKeyUp = new Dictionary<string, UnityAction>();
-		private Dictionary<string, UnityAction> actionMapKeyDown = new Dictionary<string, UnityAction>();
+		private Dictionary<string, UnityAction> actionMapKeyUp = new();
+		private Dictionary<string, UnityAction> actionMapKeyDown = new();
 		
 		private Vector2 _shiftClick;
 		private Vector2 _startPosition = Vector2.zero;
 
-		private float _ver = 0.0f;
-		private float _hor = 0.0f;
-
-		protected override void Init()
-		{
-			base.Init();
-		}
+		private float _ver;
+		private float _hor;
 
 		public void InitBindings(InputBindings inputBindings)
 		{

@@ -6,7 +6,7 @@ namespace Base.Optimization
 {
 	public class ObjectPool : MonoBehaviour {
 
-		private static readonly Dictionary<string, ObjectPool> namesOfObjects = new Dictionary<string, ObjectPool>();
+		private static readonly Dictionary<string, ObjectPool> namesOfObjects = new();
 
 		public static ObjectPool GetPoolByName(string name) {
 			return namesOfObjects[name];
@@ -16,7 +16,7 @@ namespace Base.Optimization
 		private string nameOfYourPool = "DefaultName";
 
 		[SerializeField]
-		private Transform yourPoolPrefab = null;
+		private Transform yourPoolPrefab;
 
 		[SerializeField]
 		private int initialObjectCounter = 23;
@@ -25,13 +25,13 @@ namespace Base.Optimization
 		private bool setParentThisObject = true;
 
 		[SerializeField]
-		private bool setActiveRecursively = false;
+		private bool setActiveRecursively;
 
 		[SerializeField]
-		private bool useAdjustLiberate = false;
+		private bool useAdjustLiberate;
 		
-		private readonly Queue<Transform> _yourObjectsStack = new Queue<Transform>();
-		private readonly Dictionary<Transform, IPoolObject> _yourObjectsInterface = new Dictionary<Transform, IPoolObject>();
+		private readonly Queue<Transform> _yourObjectsStack = new();
+		private readonly Dictionary<Transform, IPoolObject> _yourObjectsInterface = new();
 
 		private void Awake()
 		{
@@ -42,7 +42,7 @@ namespace Base.Optimization
 		{
 			for (int i = 0; i < initialObjectCounter; i++)
 			{
-				var t = Instantiate(yourPoolPrefab) as Transform;
+				var t = Instantiate(yourPoolPrefab);
 
 				if (useAdjustLiberate)
 					InitObjectInterface(t);
@@ -59,7 +59,7 @@ namespace Base.Optimization
 			if (_yourObjectsStack.Count > 0) {
 				t = _yourObjectsStack.Dequeue ();
 			} else {
-				t = Instantiate (yourPoolPrefab) as Transform;
+				t = Instantiate (yourPoolPrefab);
 				
 				if (useAdjustLiberate)
 					InitObjectInterface(t);
@@ -126,47 +126,3 @@ namespace Base.Optimization
 		}
 	}
 }
-
-/*
-//example use in code
-public class YourPoolExampleUsage : MonoBehaviour
-{
-	void Start()
-	{
-		ObjectPool pool = ObjectPool.GetPoolByName("Bang");
-		Transform obj = pool.GetObject(Vector3.zero);
-	}
-}
-
-
-//example using event in pooled Object
-//[RequireComponent(typeof(ParticleSystem))]
-public class YourPoolParticleSystem : MonoBehaviour, IPoolObject
-{
-	private ObjectPool yourPoolClass;
-
-	public void OnPoolAdjusting(ObjectPool ypc)
-	{
-		yourPoolClass = ypc;
-		particleSystem.renderer.enabled = true;
-		particleSystem.time = 0;
-		particleSystem.Clear(true);
-		particleSystem.Play(true);
-	}
-
-	public void LiberationObject(ObjectPool ypc)
-	{
-		particleSystem.Stop();
-		particleSystem.time = 0;
-		particleSystem.Clear(true);
-		particleSystem.renderer.enabled = false;
-	}
-
-	void Update()
-	{
-		if (!particleSystem.IsAlive(true) && particleSystem.renderer.enabled)
-		{
-			yourPoolClass.LiberationObject(transform);
-		}
-	}
-}*/

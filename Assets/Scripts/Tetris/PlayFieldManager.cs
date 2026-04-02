@@ -12,7 +12,7 @@ namespace Tetris
         [SerializeField]
         private Vector2Int size = new Vector2Int(10, 15);
 
-        private readonly Dictionary<PointField, PointFieldManager> pointList = new Dictionary<PointField, PointFieldManager>();
+        private readonly Dictionary<PointField, PointFieldManager> pointList = new();
 
         private ObjectField[] nextDropObjectList = new ObjectField[3];
 
@@ -41,7 +41,6 @@ namespace Tetris
 
             playField = new PlayField(size);
             
-            // define events
             playField.DestroyLineEvent += LineDestroy;
             playField.DropLineEvent += LineDrop;
 
@@ -185,7 +184,6 @@ namespace Tetris
                     var pointFM = pointList[point];
                     pointList.Remove(point);
                     
-                    //Destroy(pointFM.gameObject);
                     objectPool.LiberationObject(pointFM.transform);
                 }
             }

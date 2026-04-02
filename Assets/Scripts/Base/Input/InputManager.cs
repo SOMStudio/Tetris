@@ -10,8 +10,8 @@ namespace Base.Input
     {
         private InputBindings inputBindings;
         private IMouseInputHandler mouseInputHandler;
-        private Dictionary<string, UnityAction> actionMapKeyUp = new Dictionary<string, UnityAction>();
-        private Dictionary<string, UnityAction> actionMapKeyDown = new Dictionary<string, UnityAction>();
+        private Dictionary<string, UnityAction> actionMapKeyUp = new();
+        private Dictionary<string, UnityAction> actionMapKeyDown = new();
         
         public InputManager(InputBindings inputBindings)
         {

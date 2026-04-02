@@ -22,15 +22,13 @@ namespace Base.Optimization
 		private int minFPS = -1;
 		private int maxFPS = -1;
 
-		// main event
-		void Start()
+		private void Start()
 		{
 			m_FpsNextPeriod = Time.realtimeSinceStartup + fpsMeasurePeriod;
 		}
 
-		void Update()
+		private void Update()
 		{
-			// measure average frames per second
 			m_FpsAccumulator++;
 			if (Time.realtimeSinceStartup > m_FpsNextPeriod)
 			{
@@ -52,9 +50,9 @@ namespace Base.Optimization
 				m_FpsNextPeriod += fpsMeasurePeriod;
 
 				
-				m_Text.text = string.Format ("FPS:{0}", m_CurrentFps);
-				min_Text.text = string.Format ("minFPS:{0}", minFPS);
-				max_Text.text = string.Format ("maxFPS:{0}", maxFPS);
+				m_Text.text = $"FPS:{m_CurrentFps}";
+				min_Text.text = $"minFPS:{minFPS}";
+				max_Text.text = $"maxFPS:{maxFPS}";
 			}
 		}
 	}

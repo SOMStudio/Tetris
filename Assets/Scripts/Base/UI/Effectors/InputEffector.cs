@@ -17,7 +17,7 @@ namespace Base.UI.Effectors
         [SerializeField] private Image imageControl;
         [SerializeField] private Image imageBg;
 
-        private bool _rotate = false;
+        private bool _rotate;
         private float _multiplier = 1.0f;
         
         private void Update()

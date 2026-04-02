@@ -15,18 +15,18 @@ namespace Game
 
 		private ISaveSystem _fileSaveSystem;
 
-		private bool _dataWasRead = false;
-		private bool _dataNeedWrite = false;
+		private bool _dataWasRead;
+		private bool _dataNeedWrite;
 
-		private bool _highScoreShowInLevel = false;
+		private bool _highScoreShowInLevel;
 
 		private BaseGameController gameController;
 
 		private SingletonComposition<UserManager> _singletonComponent;
 		
 		[System.NonSerialized] public static UserManager Instance;
-		
-		void Awake()
+
+		private void Awake()
 		{
 			_singletonComponent = new SingletonComposition<UserManager>(Instance, 
 				() => Instance = this,
@@ -124,10 +124,7 @@ namespace Game
 		{
 			return wave.Get();
 		}
-
-		/// <summary>
-		/// save player data in file with encrypting, not use for Web-application (web can't write file)
-		/// </summary>
+		
 		public void SavePrivateDataPlayer()
 		{
 			if (_dataWasRead)
@@ -149,10 +146,7 @@ namespace Game
 				LoadPrivateDataPlayer();
 			}
 		}
-
-		/// <summary>
-		/// restore player data from encrypting file.
-		/// </summary>
+		
 		public void LoadPrivateDataPlayer()
 		{
 			if (!_dataWasRead)

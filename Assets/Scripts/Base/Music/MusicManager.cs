@@ -10,14 +10,6 @@ namespace Base.Music
 		[Header("Main")]
 		[SerializeField] protected List<MusicClipManager> musicList;
 
-		private void Start() {
-			Init();
-		}
-
-		private void Init() {
-			
-		}
-
 		public void UpdateVolume() {
 			foreach (MusicClipManager item in musicList) {
 				item.UpdateVolume ();

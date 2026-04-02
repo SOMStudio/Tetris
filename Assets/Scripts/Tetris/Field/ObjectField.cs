@@ -9,7 +9,7 @@ namespace Tetris
     {
         private string name = "free";
         private Vector2Int size;
-        private Dictionary<PointField, bool> objectField = new Dictionary<PointField, bool>();
+        private Dictionary<PointField, bool> objectField = new();
         private Vector2Int centerTransformation = Vector2Int.zero;
         private bool canRotate = true;
 

@@ -51,7 +51,6 @@ namespace Tetris.GameLogic.DevScripts
 
         public override void CheckGlobalTask()
         {
-            
         }
     }
 }

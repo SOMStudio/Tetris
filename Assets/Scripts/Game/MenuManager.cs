@@ -30,7 +30,7 @@ namespace Game
 
         private SingletonComposition<MenuManager> _singletonComponent;
         
-        private bool _cursorIsOverGameUi = false;
+        private bool _cursorIsOverGameUi;
         
         [System.NonSerialized] public static MenuManager Instance;
 
@@ -166,14 +166,12 @@ namespace Game
             base.ExitGame ();
         }
         #endregion
-
-        // main menu
+        
         public void OpenMenu()
         {
             ActivateWindow(12);
         }
         
-        // game menu
         public bool IsCursorOverGameUi()
         {
             return _cursorIsOverGameUi;
@@ -192,7 +190,6 @@ namespace Game
             }
         }
         
-        // stopWatch panel
         public void StopWatchPanelOpen()
         {
             WindowActivator_Open(0);
@@ -203,13 +200,11 @@ namespace Game
             WindowActivator_Close(0);
         }
         
-        // left panel
         private void ChangeMuteUnmuteButton(bool value)
         {
             muteUnmuteIntersectImage.enabled = value;
         }
         
-        // right panel
         public void GameRightPanelOpen()
         {
             WindowActivator_Open(3);
@@ -219,8 +214,7 @@ namespace Game
         {
             WindowActivator_Close(3);
         }
-
-        //button action
+        
         public void MainMenu_Button()
         {
             OpenMenu();

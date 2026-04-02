@@ -15,8 +15,8 @@ namespace Tetris
         [SerializeField] private InputSlideUi4Way inputSlider;
         [SerializeField] private InputEffector inputEffector;
 
-        private float hor = .0f;
-        private float ver = .0f;
+        private float hor;
+        private float ver;
         
         private IInputManager _inputManager;
 

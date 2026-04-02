@@ -6,11 +6,11 @@ namespace Base.Utility
 	public class WindowOpenClose : MonoBehaviour
 	{
 		[SerializeField]
-		private bool defaultOpen = false;
+		private bool defaultOpen;
 		
-		private bool _isOpen = false;
+		private bool _isOpen;
 
-		void Awake()
+		private void Awake()
 		{
 			Init();
 		}
@@ -52,6 +52,5 @@ namespace Base.Utility
 		{
 			return _isOpen;
 		}
-		
 	}
 }
