@@ -22,8 +22,8 @@ namespace Base.Input
 		private Vector2 _shiftClick;
 		private Vector2 _startPosition = Vector2.zero;
 
-		private float _ver;
-		private float _hor;
+		private float _vertical;
+		private float _horizontal;
 
 		public void InitBindings(InputBindings inputBindings)
 		{
@@ -58,8 +58,8 @@ namespace Base.Input
 			float distanceToPoint = Mathf.Clamp (vectorToPoint.magnitude, -slideClump, slideClump);
 			Vector2 controlPos = dirToPoint * distanceToPoint;
 			
-			_ver = controlPos.y / slideClump;
-			_hor = controlPos.x / slideClump;
+			_vertical = controlPos.y / slideClump;
+			_horizontal = controlPos.x / slideClump;
 			
 			myTransform.position = new Vector3 (_startPosition.x + controlPos.x, _startPosition.y + controlPos.y, myTransform.position.z);
 		}
@@ -67,8 +67,8 @@ namespace Base.Input
 		public void OnPointerUp (PointerEventData data) {
 			myTransform.position = new Vector3(_startPosition.x, _startPosition.y, myTransform.position.z);
 			
-			_ver = 0f;
-			_hor = 0f;
+			_vertical = 0f;
+			_horizontal = 0f;
 
 			if (inputBindings == null) return;
 			
@@ -95,10 +95,10 @@ namespace Base.Input
 		{
 			if (axisName == "Horizontal")
 			{
-				return _hor;
+				return _horizontal;
 			} else if (axisName == "Vertical")
 			{
-				return _ver;
+				return _vertical;
 			}
 
 			throw new NotImplementedException();

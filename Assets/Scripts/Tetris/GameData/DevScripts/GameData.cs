@@ -12,18 +12,13 @@ namespace Tetris.GameData.DevScripts
         [SerializeField] private Color[] colorList;
 
         [Header("Time")]
-        [SerializeField]
-        private float controlStep = 0.25f;
-        [SerializeField]
-        private float dropStep = 1.0f;
-        [SerializeField]
-        private float reduceDropStepPeriod = 60.0f;
-        [SerializeField]
-        private float reduceDropStepMagnitude = 0.05f;
+        [SerializeField] private float controlStep = 0.25f;
+        [SerializeField] private float dropStep = 1.0f;
+        [SerializeField] private float reduceDropStepPeriod = 60.0f;
+        [SerializeField] private float reduceDropStepMagnitude = 0.05f;
 
         [Header("Wave")]
-        [SerializeField]
-        private float magnitudeWavePeriod = 5 * 60.0f;
+        [SerializeField] private float magnitudeWavePeriod = 5 * 60.0f;
 
         public Color GetDropObjectColor(int index)
         {

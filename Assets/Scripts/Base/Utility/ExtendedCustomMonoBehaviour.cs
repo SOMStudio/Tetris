@@ -4,17 +4,11 @@ namespace Base.Utility
 {
 	public class ExtendedCustomMonoBehaviour : MonoBehaviour
 	{
-		protected bool didInit;
-		protected bool canControl;
-
 		protected int id;
 
 		protected Transform myTransform;
-		protected GameObject myGO;
+		protected GameObject myGameObject;
 		protected Rigidbody myBody;
-
-		protected Vector3 tempVEC;
-		protected Transform tempTR;
 
 		protected virtual void Start()
 		{
@@ -28,17 +22,15 @@ namespace Base.Utility
 				myTransform = transform;
 			}
 
-			if (!myGO)
+			if (!myGameObject)
 			{
-				myGO = gameObject;
+				myGameObject = gameObject;
 			}
 
 			if (!myBody)
 			{
 				myBody = GetComponent<Rigidbody>();
 			}
-
-			didInit = true;
 		}
 
 		public virtual void SetId(int anId)

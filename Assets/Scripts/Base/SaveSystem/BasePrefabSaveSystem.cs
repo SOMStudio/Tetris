@@ -24,7 +24,6 @@ namespace Base.SaveSystem
         public event UnityAction ChangeGraphicsValueEvent;
         
         private int detailLevels = 6;
-        private bool needSaveOptions = false;
 
         private void Start()
         {

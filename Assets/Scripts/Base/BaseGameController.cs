@@ -12,7 +12,7 @@ namespace Base
 		[SerializeField] protected GameObject explosionPrefab;
 
 		[Header("Level")]
-		[SerializeField] protected bool menuAndLevelsDivided = false;
+		[SerializeField] protected bool menuAndLevelsDivided;
 		[SerializeField] protected BaseLevelManager levelManager;
 		
 		[Header("Data")]

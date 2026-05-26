@@ -1,6 +1,7 @@
+using System;
 using UnityEngine;
 
-namespace Tetris
+namespace Tetris.Field
 {
     public struct PointField
     {
@@ -67,6 +68,11 @@ namespace Tetris
                 return true;
             else
                 return false;
+        }
+        
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(x, y);
         }
     }
 }

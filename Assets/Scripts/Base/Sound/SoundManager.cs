@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Base.Sound
 {
-	[AddComponentMenu("Base/Sound Manager")]
+	[AddComponentMenu("SOMStudio/Tetris/Base/Sound Manager")]
 	public class SoundManager : SingletonMonoBehaviour<SoundManager>
 	{
 		[Header("Main")]
@@ -27,7 +27,7 @@ namespace Base.Sound
 
 		private void Init()
 		{
-			string stKey = string.Format("{0}_SFXVol", gamePrefsName);
+			string stKey = $"{gamePrefsName}_SFXVol";
 			if (PlayerPrefs.HasKey(stKey))
 			{
 				volume = PlayerPrefs.GetFloat(stKey);

@@ -12,9 +12,9 @@ namespace Base.Resource
         [Header("Events")]
         [SerializeField] private FloatEvent changeEvent; 
         
-        public void Set(float value)
+        public void Set(float setValue)
         {
-            this.value = value;
+            value = setValue;
         }
 
         public float Get()
@@ -22,42 +22,42 @@ namespace Base.Resource
             return value;
         }
 
-        public void Add(float value)
+        public void Add(float setValue)
         {
-            this.value += value;
+            value += setValue;
             
-            changeEvent?.Invoke(this.value);
+            changeEvent?.Invoke(value);
         }
 
-        public void Reduce(float value)
+        public void Reduce(float setValue)
         {
-            if (this.value > 0)
+            if (value > 0)
             {
-                this.value -= value;
-                if (this.value < 0)
+                value -= setValue;
+                if (value < 0)
                 {
-                    this.value = 0;
+                    value = 0;
                 }
                 
-                changeEvent?.Invoke(this.value);
+                changeEvent?.Invoke(value);
             }
         }
         
-        public void Change(float value)
+        public void Change(float setValue)
         {
-            this.value = value;
+            value = setValue;
             
-            changeEvent?.Invoke(this.value);
+            changeEvent?.Invoke(value);
         }
 
-        public void AddListener(UnityAction<float> value)
+        public void AddListener(UnityAction<float> setValue)
         {
-            changeEvent.AddListener(value);
+            changeEvent.AddListener(setValue);
         }
 
-        public void RemoveListener(UnityAction<float> value)
+        public void RemoveListener(UnityAction<float> setValue)
         {
-            changeEvent.RemoveListener(value);
+            changeEvent.RemoveListener(setValue);
         }
         
         [Serializable]

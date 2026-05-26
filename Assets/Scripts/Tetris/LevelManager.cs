@@ -5,29 +5,31 @@ using Base.Utility;
 using Tetris.GameLogic.DevScripts;
 using Game;
 using Game.Menu;
+using Tetris.Spawn;
+using Tetris.UI;
 using UnityEngine;
 
 namespace Tetris
 {
     public class LevelManager : BaseLevelManager
     {
-        [Header("Main")] [SerializeField]
-        private bool useDontDestroy = true;
+        [Header("Main")]
+        [SerializeField] private bool useDontDestroy = true;
 
-        [Header("Play Field Manager")] [SerializeField]
-        private PlayFieldManager playFieldManager;
+        [Header("Play Field Manager")]
+        [SerializeField] private PlayFieldManager playFieldManager;
 
-        [Header("Player Manager")] [SerializeField]
-        private PlayerManager playerManager;
+        [Header("Player Manager")]
+        [SerializeField] private PlayerManager playerManager;
 
-        [Header("Spawn Manager")] [SerializeField]
-        private TimeManager timeManager;
+        [Header("Spawn Manager")]
+        [SerializeField] private TimeManager timeManager;
 
-        [Header("Spawn Manager")] [SerializeField]
-        private ObjectPool spawnManager;
+        [Header("Spawn Manager")]
+        [SerializeField] private ObjectPool spawnManager;
 
-        [Header("Drop Object Manager UI")] [SerializeField]
-        private DropObjectManagerUi dropObjectManagerUi;
+        [Header("Drop Object Manager UI")]
+        [SerializeField] private DropObjectManagerUi dropObjectManagerUi;
 
         private IMainMenu mainMenu;
         private IGameMenu gameMenu;

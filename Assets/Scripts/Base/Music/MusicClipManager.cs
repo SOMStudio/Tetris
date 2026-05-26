@@ -3,46 +3,46 @@ using UnityEngine;
 
 namespace Base.Music
 {
-	[AddComponentMenu("Base/Music Clip")]
+	[AddComponentMenu("SOMStudio/Tetris/Base/Music Clip")]
 	public class MusicClipManager : MonoBehaviour {
 
 		[Header("Main")]
 		[SerializeField] private string gamePrefsName= "DefaultGame";
 		
 		[SerializeField] private AudioClip music;
-		[SerializeField] private bool loopMusic = false;
+		[SerializeField] private bool loopMusic;
 		[SerializeField] private float fadeTime = 5f;
 	
 		private AudioSource source;
-		private GameObject sourceGO;
+		private GameObject sourceGameObject;
 
 		private float volumePrefs;
 		private float targetVolume;
 
-		private bool playClip = false;
+		private bool playClip;
 
 		[Header("Start game")]
-		public bool playAtStart = false;
+		public bool playAtStart;
 
 		[Header("Information")]
 		[SerializeField] [Range(0, 1)]  private float volume;
 
 		private void Awake ()
 		{
-			string stKey = string.Format ("{0}_MusicVol", gamePrefsName);
+			string stKey = $"{gamePrefsName}_MusicVol";
 			if (PlayerPrefs.HasKey (stKey)) {
 				volumePrefs = PlayerPrefs.GetFloat (stKey);
 			} else {
 				volumePrefs = 0.5f;
 			}
 			
-			sourceGO = new GameObject ("Music_" + music.name);
-			source = sourceGO.AddComponent<AudioSource> ();
+			sourceGameObject = new GameObject ("Music_" + music.name);
+			source = sourceGameObject.AddComponent<AudioSource> ();
 			source.name = "Music_" + music.name;
 			source.playOnAwake = playAtStart;
 			source.clip = music;
 			source.volume = volume;
-			DontDestroyOnLoad (sourceGO);
+			DontDestroyOnLoad (sourceGameObject);
 			
 			playClip = playAtStart;
 			
@@ -76,7 +76,7 @@ namespace Base.Music
 	
 		public void UpdateVolume () {
 			if (source) {
-				volumePrefs = PlayerPrefs.GetFloat (string.Format ("{0}_MusicVol", gamePrefsName));
+				volumePrefs = PlayerPrefs.GetFloat ($"{gamePrefsName}_MusicVol");
 				
 				volume = source.volume;
 				targetVolume = volumePrefs;

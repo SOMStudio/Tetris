@@ -40,7 +40,7 @@ namespace Base
 		[SerializeField] private int numberGameWindowAdvice = -1;
 		
 		[SerializeField] private TMP_Text gameWindowAdviceText;
-		[SerializeField] private int _countCharForDelayOneSecond = 10;
+		[SerializeField] private int countCharForDelayOneSecond = 10;
 
 		protected virtual void ExitGame()
 		{
@@ -399,7 +399,7 @@ namespace Base
 				CancelInvoke();
 			}
 
-			int delayTime = value.Length / _countCharForDelayOneSecond;
+			int delayTime = value.Length / countCharForDelayOneSecond;
 			delayTime = delayTime > 0 ? delayTime : 1;
             
 			Invoke(nameof(CloseAdviceGameWindow), delayTime);

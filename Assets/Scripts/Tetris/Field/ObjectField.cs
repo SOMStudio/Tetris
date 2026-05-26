@@ -3,7 +3,7 @@ using System.Linq;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-namespace Tetris
+namespace Tetris.Field
 {
     public class ObjectField
     {

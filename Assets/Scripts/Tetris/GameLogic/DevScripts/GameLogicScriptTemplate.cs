@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Tetris.GameLogic.DevScripts
 {
-    [CreateAssetMenu(fileName = "New GameLogicDataTemplate", menuName = "SOMStudio/Tetris Data/Create Game logic Data Template")]
+    [CreateAssetMenu(fileName = "New GameLogicDataTemplate", menuName = "SOMStudio/Tetris/Create Game logic Data Template")]
     public class GameLogicScriptTemplate : BaseLogicScriptTemplate
     {
         [SerializeField] private GameLogicScript script;

@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Base
 {
-	[AddComponentMenu("Base/User Manager")]
+	[AddComponentMenu("SOMStudio/Tetris/Base/User Manager")]
 	public class BaseUserManager : MonoBehaviour
 	{
 		[Header("Base")]

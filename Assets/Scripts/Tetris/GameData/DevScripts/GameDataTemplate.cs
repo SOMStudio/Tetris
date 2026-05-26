@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Tetris.GameData.DevScripts
 {
-    [CreateAssetMenu(fileName = "New GameDataTemplate", menuName = "SOMStudio/Tetris Data/Create Game Data Template")]
+    [CreateAssetMenu(fileName = "New GameDataTemplate", menuName = "SOMStudio/Tetris/Create Game Data Template")]
     public class GameDataTemplate : BaseDataTemplate
     {
         [SerializeField] private GameData data;

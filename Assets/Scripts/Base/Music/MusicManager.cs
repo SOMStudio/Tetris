@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Base.Music
 {
-	[AddComponentMenu("Base/Music Manager")]
+	[AddComponentMenu("SOMStudio/Tetris/Base/Music Manager")]
 	public class MusicManager : SingletonMonoBehaviour<MusicManager> {
 
 		[Header("Main")]

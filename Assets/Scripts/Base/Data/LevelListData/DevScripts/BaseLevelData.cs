@@ -5,8 +5,7 @@ namespace Base.Data.LevelListData.DevScripts
     public abstract class BaseLevelData
     {
         [Header("Base")]
-        [SerializeField]
-        private string nameScene;
+        [SerializeField] private string nameScene;
 
         public string NameScene { get; internal set; }
 

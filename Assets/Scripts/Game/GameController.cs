@@ -6,7 +6,7 @@ using UnityEngine.Events;
 
 namespace Game
 {
-    [AddComponentMenu("Base/GameController")]
+    [AddComponentMenu("SOMStudio/Tetris/GameController")]
     public class GameController : BaseGameController
     {
         [Header("Main")]

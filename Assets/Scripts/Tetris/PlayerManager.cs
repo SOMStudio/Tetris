@@ -15,15 +15,15 @@ namespace Tetris
         [SerializeField] private InputSlideUi4Way inputSlider;
         [SerializeField] private InputEffector inputEffector;
 
-        private float hor;
-        private float ver;
+        private float horizontal;
+        private float vertical;
         
         private IInputManager _inputManager;
 
         public int Id => id;
 
-        public float Horizontal => hor;
-        public float Vertical => ver;
+        public float Horizontal => horizontal;
+        public float Vertical => vertical;
 
         private void Update()
         {
@@ -34,7 +34,7 @@ namespace Tetris
         {
             base.Init();
             
-            SetId(myGO.GetHashCode());
+            SetId(myGameObject.GetHashCode());
 
             #if (INPUT_MOBILE)
             inputSlider.InitBindings(new SampleBindings());
@@ -42,7 +42,7 @@ namespace Tetris
             _inputManager.AddActionToBindingKeyDown("shoot", StartControl);
             _inputManager.AddActionToBindingKeyUp("shoot", StopControl);
             #else
-             _inputManager = new InputManager(new SampleBindings());
+            _inputManager = new InputManager(new SampleBindings());
             _inputManager.AddActionToBindingKeyDown("shoot", StartControl);
             _inputManager.AddActionToBindingKeyUp("shoot", StopControl);
             #endif
@@ -54,11 +54,11 @@ namespace Tetris
             if (MenuManager.Instance.IsMenuActive()) return;
             if (MenuManager.Instance.IsCursorOverGameUi()) return;
             
-            ver = _inputManager.GetAxis("Vertical");
-            hor = _inputManager.GetAxis("Horizontal");
+            vertical = _inputManager.GetAxis("Vertical");
+            horizontal = _inputManager.GetAxis("Horizontal");
 
             #if (INPUT_MOBILE)
-            inputEffector?.ActivateShiftEffect(Mathf.Abs(hor) > 0.0f, hor);
+            inputEffector?.ActivateShiftEffect(Mathf.Abs(horizontal) > 0.0f, horizontal);
             #else
             _inputManager.CheckForInput();
             #endif

@@ -2,7 +2,7 @@
 
 namespace Base.Utility
 {
-	[AddComponentMenu("Utility/Window Open-Close")]
+	[AddComponentMenu("SOMStudio/Tetris/Utility/Window Open-Close")]
 	public class WindowOpenClose : MonoBehaviour
 	{
 		[SerializeField]

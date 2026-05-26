@@ -7,7 +7,6 @@ namespace Base.Utility
 	{
 		private SingletonComposition()
 		{
-
 		}
 
 		public SingletonComposition(T instanceField, UnityAction initAction, UnityAction destroyAction)

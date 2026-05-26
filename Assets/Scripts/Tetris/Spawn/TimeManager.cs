@@ -1,134 +1,135 @@
 ﻿using Base.TimeControl;
 using Game;
-using Tetris.GameData.DevScripts;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class TimeManager : MonoBehaviour
+namespace Tetris.Spawn
 {
-
-    private float controlTime = .0f;
-    private float timeControlCheck = .0f;
+    public class TimeManager : MonoBehaviour
+    {
+        private float controlTime;
+        private float timeControlCheck;
     
-    private float dropStep = .0f;
-    private float timeDropCheck = .0f;
+        private float dropStep;
+        private float timeDropCheck;
     
-    private float reduceDropStepPeriod = .0f;
+        private float reduceDropStepPeriod;
 
-    private float reduceDropStepMagnitude = .05f;
-    private float timeReduceDropCheck = .0f;
+        private float reduceDropStepMagnitude = .05f;
+        private float timeReduceDropCheck;
 
 
-    private float waveLengthPeriad = .0f;
+        private float waveLengthPeriod;
 
-    private int numberWave = 1;
-    private float timeChangeWaveCheck = .0f;
+        private int numberWave = 1;
+        private float timeChangeWaveCheck;
 
-    private GameData gameData;
+        private GameData.DevScripts.GameData gameData;
     
-    private TimerClass timer;
+        private TimerClass timer;
 
-    [Header("Events")]
-    public UnityEvent controlEvent;
-    public UnityEvent dropEvent;
-    public UnityEvent reduceDropEvent;
-    public UnityEvent waveChangeEvent;
+        [Header("Events")]
+        public UnityEvent controlEvent;
+        public UnityEvent dropEvent;
+        public UnityEvent reduceDropEvent;
+        public UnityEvent waveChangeEvent;
 
-    public int NumberWave => numberWave;
+        public int NumberWave => numberWave;
 
-    private void Start()
-    {
-        gameData = (GameData) GameController.Instance.GameData.Data;
-        
-        timer = new TimerClass();
-        timer.ResetTimer();
-
-        Init();
-    }
-
-    private void Init()
-    {
-        controlTime = gameData.ControlStep;
-        dropStep = gameData.DropStep;
-        reduceDropStepPeriod = gameData.ReduceDropStepPeriod;
-        reduceDropStepMagnitude = gameData.ReduceDropStepMagnitude;
-        waveLengthPeriad = gameData.GetWaveLength(numberWave);
-
-        timeControlCheck += controlTime;
-        timeDropCheck += dropStep;
-        timeReduceDropCheck += reduceDropStepPeriod;
-        timeChangeWaveCheck += waveLengthPeriad;
-    }
-
-    private void Reset()
-    {
-        timeControlCheck = .0f;
-        timeDropCheck = .0f;
-        timeReduceDropCheck = .0f;
-        numberWave = 1;
-
-        Init();
-    }
-
-    private void ChangeWave()
-    {
-        dropStep = gameData.DropStep;
-    }
-    
-    private void Update()
-    {
-        timer.UpdateTimer();
-
-        if (timer.GetTime() >= timeControlCheck)
+        private void Start()
         {
+            gameData = (GameData.DevScripts.GameData) GameController.Instance.GameData.Data;
+        
+            timer = new TimerClass();
+            timer.ResetTimer();
+
+            Init();
+        }
+
+        private void Init()
+        {
+            controlTime = gameData.ControlStep;
+            dropStep = gameData.DropStep;
+            reduceDropStepPeriod = gameData.ReduceDropStepPeriod;
+            reduceDropStepMagnitude = gameData.ReduceDropStepMagnitude;
+            waveLengthPeriod = gameData.GetWaveLength(numberWave);
+
             timeControlCheck += controlTime;
-            
-            controlEvent?.Invoke();
-        }
-
-        if (timer.GetTime() >= timeReduceDropCheck && dropStep >= controlTime)
-        {
-            dropStep -= reduceDropStepMagnitude;
-            
-            timeReduceDropCheck += reduceDropStepPeriod;
-            
-            reduceDropEvent?.Invoke();
-        }
-        
-        if (timer.GetTime() >= timeDropCheck)
-        {
             timeDropCheck += dropStep;
-            
-            dropEvent?.Invoke();
+            timeReduceDropCheck += reduceDropStepPeriod;
+            timeChangeWaveCheck += waveLengthPeriod;
         }
 
-        if (timer.GetTime() >= timeChangeWaveCheck)
+        private void Reset()
         {
-            numberWave++;
+            timeControlCheck = .0f;
+            timeDropCheck = .0f;
+            timeReduceDropCheck = .0f;
+            numberWave = 1;
 
-            timeChangeWaveCheck += gameData.GetWaveLength(numberWave);
-
-            ChangeWave();
-
-            waveChangeEvent?.Invoke();
+            Init();
         }
-    }
 
-    public void PauseTime()
-    {
-        timer.StopTimer();
-    }
+        private void ChangeWave()
+        {
+            dropStep = gameData.DropStep;
+        }
+    
+        private void Update()
+        {
+            timer.UpdateTimer();
 
-    public void StopTime()
-    {
-        timer.StopTimer();
-        timer.ResetTimer();
+            if (timer.GetTime() >= timeControlCheck)
+            {
+                timeControlCheck += controlTime;
+            
+                controlEvent?.Invoke();
+            }
+
+            if (timer.GetTime() >= timeReduceDropCheck && dropStep >= controlTime)
+            {
+                dropStep -= reduceDropStepMagnitude;
+            
+                timeReduceDropCheck += reduceDropStepPeriod;
+            
+                reduceDropEvent?.Invoke();
+            }
         
-        Reset();
-    }
+            if (timer.GetTime() >= timeDropCheck)
+            {
+                timeDropCheck += dropStep;
+            
+                dropEvent?.Invoke();
+            }
 
-    public void StartTime()
-    {
-        timer.StartTimer();
+            if (timer.GetTime() >= timeChangeWaveCheck)
+            {
+                numberWave++;
+
+                timeChangeWaveCheck += gameData.GetWaveLength(numberWave);
+
+                ChangeWave();
+
+                waveChangeEvent?.Invoke();
+            }
+        }
+
+        public void PauseTime()
+        {
+            timer.StopTimer();
+        }
+
+        public void StopTime()
+        {
+            timer.StopTimer();
+            timer.ResetTimer();
+        
+            Reset();
+        }
+
+        public void StartTime()
+        {
+            timer.StartTimer();
+        }
     }
 }

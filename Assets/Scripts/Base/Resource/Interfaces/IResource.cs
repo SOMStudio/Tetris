@@ -2,15 +2,15 @@
 
 namespace Base.Resource.Interfaces
 {
-    interface IResource<T> where T : struct
-    {
-    void Set(T value);
-    T Get();
+	interface IResource<T> where T : struct
+	{
+		void Set(T setValue);
+		T Get();
 
-    void Add(T value);
-    void Reduce(T value);
+		void Add(T setValue);
+		void Reduce(T setValue);
 
-    void AddListener(UnityAction<T> value);
-    void RemoveListener(UnityAction<T> value);
-    }
+		void AddListener(UnityAction<T> setValue);
+		void RemoveListener(UnityAction<T> setValue);
+	}
 }

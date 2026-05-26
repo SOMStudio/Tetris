@@ -1,40 +1,43 @@
 ﻿using System.Collections.Generic;
-using Tetris;
+using Tetris.Field;
 using UnityEngine;
 
-public class DropObjectManagerUi : MonoBehaviour
+namespace Tetris.UI
 {
-    public ObjectFieldUi[] predefineObject;
-
-    private GameObject[] predefineObjectGo;
-
-    private void Start()
+    public class DropObjectManagerUi : MonoBehaviour
     {
-        predefineObjectGo = new GameObject[predefineObject.Length];
-        
-        for (int i = 0; i < predefineObject.Length; i++)
+        public ObjectFieldUi[] predefineObject;
+
+        private GameObject[] predefineObjectGo;
+
+        private void Start()
         {
-            predefineObjectGo[i] = predefineObject[i].gameObject;
+            predefineObjectGo = new GameObject[predefineObject.Length];
+
+            for (int i = 0; i < predefineObject.Length; i++)
+            {
+                predefineObjectGo[i] = predefineObject[i].gameObject;
+            }
         }
-    }
 
-    public void SetDropObject(int num, ObjectField objectField)
-    {
-        if (num < predefineObject.Length)
+        public void SetDropObject(int num, ObjectField objectField)
         {
-            predefineObjectGo[num].SetActive(true);
+            if (num < predefineObject.Length)
+            {
+                predefineObjectGo[num].SetActive(true);
 
-            predefineObject[num].ShowObject(objectField);
+                predefineObject[num].ShowObject(objectField);
+            }
         }
-    }
 
-    public void SetDropObjectList(IEnumerable<ObjectField> objectFieldList)
-    {
-        int i = 0;
-        foreach (var objectField in objectFieldList)
+        public void SetDropObjectList(IEnumerable<ObjectField> objectFieldList)
         {
-           SetDropObject(i, objectField);
-           i++;
+            int i = 0;
+            foreach (var objectField in objectFieldList)
+            {
+                SetDropObject(i, objectField);
+                i++;
+            }
         }
     }
 }

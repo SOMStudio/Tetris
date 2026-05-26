@@ -3,56 +3,52 @@ using UnityEngine.UI;
 
 namespace Base.Optimization
 {
-	[AddComponentMenu("Utility/FPS counter")]
-
+	[AddComponentMenu("SOMStudio/Tetris/Utility/FPS counter")]
 	public class FpsCounter : MonoBehaviour
 	{
 		[Header("Settings")]
-		[SerializeField]
-		private Text m_Text;
-		[SerializeField]
-		private Text min_Text;
-		[SerializeField]
-		private Text max_Text;
+		[SerializeField] private Text fpsText;
+		[SerializeField] private Text minFpsText;
+		[SerializeField] private Text maxFpsText;
 
 		private const float fpsMeasurePeriod = 0.5f;
-		private int m_FpsAccumulator = 0;
-		private float m_FpsNextPeriod = 0;
-		private int m_CurrentFps;
+		private int fpsAccumulator;
+		private float fpsNextPeriod;
+		private int currentFps;
 		private int minFPS = -1;
 		private int maxFPS = -1;
 
 		private void Start()
 		{
-			m_FpsNextPeriod = Time.realtimeSinceStartup + fpsMeasurePeriod;
+			fpsNextPeriod = Time.realtimeSinceStartup + fpsMeasurePeriod;
 		}
 
 		private void Update()
 		{
-			m_FpsAccumulator++;
-			if (Time.realtimeSinceStartup > m_FpsNextPeriod)
+			fpsAccumulator++;
+			if (Time.realtimeSinceStartup > fpsNextPeriod)
 			{
-				m_CurrentFps = (int) (m_FpsAccumulator/fpsMeasurePeriod);
+				currentFps = (int) (fpsAccumulator/fpsMeasurePeriod);
 
 				if (Time.realtimeSinceStartup > 20) {
 					if (minFPS == -1) {
-						minFPS = m_CurrentFps;
-						maxFPS = m_CurrentFps;
+						minFPS = currentFps;
+						maxFPS = currentFps;
 					} else {
-						if (minFPS > m_CurrentFps)
-							minFPS = m_CurrentFps;
-						if (maxFPS < m_CurrentFps)
-							maxFPS = m_CurrentFps;
+						if (minFPS > currentFps)
+							minFPS = currentFps;
+						if (maxFPS < currentFps)
+							maxFPS = currentFps;
 					}
 				}
 
-				m_FpsAccumulator = 0;
-				m_FpsNextPeriod += fpsMeasurePeriod;
+				fpsAccumulator = 0;
+				fpsNextPeriod += fpsMeasurePeriod;
 
 				
-				m_Text.text = $"FPS:{m_CurrentFps}";
-				min_Text.text = $"minFPS:{minFPS}";
-				max_Text.text = $"maxFPS:{maxFPS}";
+				fpsText.text = $"FPS:{currentFps}";
+				minFpsText.text = $"minFPS:{minFPS}";
+				maxFpsText.text = $"maxFPS:{maxFPS}";
 			}
 		}
 	}
