@@ -15,7 +15,7 @@ namespace Tetris
 
         private readonly Dictionary<PointField, PointFieldManager> pointList = new();
 
-        private ObjectField[] nextDropObjectList = new ObjectField[3];
+        private readonly ObjectField[] nextDropObjectList = new ObjectField[3];
 
         private PlayField playField;
 

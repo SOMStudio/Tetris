@@ -12,7 +12,7 @@ namespace Tetris.Field
         private Vector2Int size;
         private Vector2Int spawnPoint;
         
-        private Dictionary<PointField, bool> playField = new();
+        private readonly Dictionary<PointField, bool> playField = new();
         
         public ObjectField objectField;
         private Vector2Int positionObjectField;

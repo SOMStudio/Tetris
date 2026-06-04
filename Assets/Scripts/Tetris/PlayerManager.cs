@@ -18,7 +18,7 @@ namespace Tetris
         private float horizontal;
         private float vertical;
         
-        private IInputManager _inputManager;
+        private IInputManager inputManager;
 
         public int Id => id;
 
@@ -38,13 +38,13 @@ namespace Tetris
 
             #if (INPUT_MOBILE)
             inputSlider.InitBindings(new SampleBindings());
-            _inputManager = inputSlider;
-            _inputManager.AddActionToBindingKeyDown("shoot", StartControl);
-            _inputManager.AddActionToBindingKeyUp("shoot", StopControl);
+            inputManager = inputSlider;
+            inputManager.AddActionToBindingKeyDown("shoot", StartControl);
+            inputManager.AddActionToBindingKeyUp("shoot", StopControl);
             #else
-            _inputManager = new InputManager(new SampleBindings());
-            _inputManager.AddActionToBindingKeyDown("shoot", StartControl);
-            _inputManager.AddActionToBindingKeyUp("shoot", StopControl);
+            inputManager = new InputManager(new SampleBindings());
+            inputManager.AddActionToBindingKeyDown("shoot", StartControl);
+            inputManager.AddActionToBindingKeyUp("shoot", StopControl);
             #endif
         }
 
@@ -54,13 +54,13 @@ namespace Tetris
             if (MenuManager.Instance.IsMenuActive()) return;
             if (MenuManager.Instance.IsCursorOverGameUi()) return;
             
-            vertical = _inputManager.GetAxis("Vertical");
-            horizontal = _inputManager.GetAxis("Horizontal");
+            vertical = inputManager.GetAxis("Vertical");
+            horizontal = inputManager.GetAxis("Horizontal");
 
             #if (INPUT_MOBILE)
             inputEffector?.ActivateShiftEffect(Mathf.Abs(horizontal) > 0.0f, horizontal);
             #else
-            _inputManager.CheckForInput();
+            inputManager.CheckForInput();
             #endif
         }
 

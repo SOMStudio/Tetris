@@ -22,9 +22,9 @@ namespace Base
 		[Header("Logic")]
 		[SerializeField] private BaseLogicScriptTemplate gameLogicScript;
 		
-		private bool _paused;
+		private bool paused;
 
-		private Camera _mainCamera;
+		private Camera mainCamera;
 
 		public bool MenuAndLevelsDivided => menuAndLevelsDivided;
 
@@ -32,8 +32,8 @@ namespace Base
 		{
 			get
 			{
-				if (_mainCamera == null) _mainCamera = Camera.main;
-				return _mainCamera;
+				if (mainCamera == null) mainCamera = Camera.main;
+				return mainCamera;
 			}
 		}
 		
@@ -143,12 +143,12 @@ namespace Base
 
 		private bool Paused
 		{
-			get { return _paused; }
+			get { return paused; }
 			set
 			{
-				_paused = value;
+				paused = value;
 
-				if (_paused)
+				if (paused)
 				{
 					Time.timeScale = 0f;
 				}

@@ -10,7 +10,7 @@ namespace Base
 		[SerializeField] protected string gamePrefsName = "DefaultGame";
 		
 		[Header("Data")]
-		[SerializeField] protected string playerName = "Aanonym";
+		[SerializeField] protected string playerName = "Anonim";
 		[SerializeField] protected IntResource score;
 		[SerializeField] protected IntResource highScore;
 		[SerializeField] protected IntResource level;

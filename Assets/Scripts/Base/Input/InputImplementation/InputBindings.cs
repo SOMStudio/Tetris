@@ -5,7 +5,7 @@ namespace Base.Input.InputImplementation
 {
     public class InputBindings
     {
-        protected Dictionary<string, KeyCode> keyBindings = new();
+        protected readonly Dictionary<string, KeyCode> keyBindings = new();
 
         public Dictionary<string, KeyCode> KeyBindings => keyBindings;
 

@@ -7,7 +7,7 @@ namespace Base.Utility
         [Header("Singleton")]
         [SerializeField] private bool useDontDestroy = true;
 
-        private static readonly object _lock = new();
+        private static readonly object Lock = new();
 
         [System.NonSerialized] public static T Instance;
 
@@ -18,7 +18,7 @@ namespace Base.Utility
 
         private void InitSingleton()
         {
-            lock (_lock)
+            lock (Lock)
             {
                 if (!Instance)
                 {

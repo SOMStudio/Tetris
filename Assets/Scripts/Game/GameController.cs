@@ -12,7 +12,7 @@ namespace Game
         [Header("Main")]
         [SerializeField] private bool useDontDestroy = true;
 
-        private SingletonComposition<GameController> _singletonComponent;
+        private SingletonComposition<GameController> singletonComponent;
 
         private bool showStartMessage = true;
 
@@ -24,7 +24,7 @@ namespace Game
 
         private void Awake()
         {
-            _singletonComponent = new SingletonComposition<GameController>(Instance, 
+            singletonComponent = new SingletonComposition<GameController>(Instance, 
                 () => Instance = this,
                 () => Destroy(this.gameObject));
         }

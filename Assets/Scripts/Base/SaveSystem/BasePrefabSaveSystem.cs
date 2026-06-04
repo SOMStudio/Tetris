@@ -33,7 +33,7 @@ namespace Base.SaveSystem
 
         protected virtual void RestoreOptionsPref()
         {
-            RestoreSFXValue();
+            RestoreSfxValue();
 
             RestoreMusicValue();
 
@@ -47,7 +47,7 @@ namespace Base.SaveSystem
             ChangeGraphicsValueEvent += SetQuality;
         }
 
-        private void RestoreSFXValue()
+        private void RestoreSfxValue()
         {
             string stKey = $"{gamePrefsName}_SFXVol";
             if (PlayerPrefs.HasKey(stKey))

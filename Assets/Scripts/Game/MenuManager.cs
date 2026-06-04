@@ -15,7 +15,7 @@ namespace Game
         [SerializeField] private bool useDontDestroy = true;
         
         [Header("Level List")]
-        [SerializeField] protected bool useLevelListWindow = false;
+        [SerializeField] protected bool useLevelListWindow;
         [SerializeField] private int numberLevelListWindow = -1;
 
         [Header("Left Panel")]
@@ -28,15 +28,15 @@ namespace Game
         [Header("HUD panel")]
         [SerializeField] private HudLifeScoreManager hudManager;
 
-        private SingletonComposition<MenuManager> _singletonComponent;
+        private SingletonComposition<MenuManager> singletonComponent;
         
-        private bool _cursorIsOverGameUi;
+        private bool cursorIsOverGameUi;
         
         [System.NonSerialized] public static MenuManager Instance;
 
         private void Awake()
         {
-            _singletonComponent = new SingletonComposition<MenuManager>(Instance, 
+            singletonComponent = new SingletonComposition<MenuManager>(Instance, 
                 () => Instance = this,
                 () => Destroy(this.gameObject));
         }
@@ -174,12 +174,12 @@ namespace Game
         
         public bool IsCursorOverGameUi()
         {
-            return _cursorIsOverGameUi;
+            return cursorIsOverGameUi;
         }
 
         public void SetOverUiState(bool value)
         {
-            _cursorIsOverGameUi = value;
+            cursorIsOverGameUi = value;
         }
         
         private void ClickEscapeEvent() {

@@ -6,7 +6,7 @@ namespace Base.SaveSystem
 {
     public class FileSaveSystem : ISaveSystem
     {
-        private string filePath;
+        private readonly string filePath;
 
         public FileSaveSystem(string filePath)
         {

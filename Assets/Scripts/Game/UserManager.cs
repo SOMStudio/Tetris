@@ -13,28 +13,28 @@ namespace Game
 		[SerializeField] private bool useDontDestroy = true;
 		[SerializeField] protected IntResource wave;
 
-		private ISaveSystem _fileSaveSystem;
+		private ISaveSystem fileSaveSystem;
 
-		private bool _dataWasRead;
-		private bool _dataNeedWrite;
+		private bool dataWasRead;
+		private bool dataNeedWrite;
 
-		private bool _highScoreShowInLevel;
+		private bool highScoreShowInLevel;
 
 		private BaseGameController gameController;
 
-		private SingletonComposition<UserManager> _singletonComponent;
+		private SingletonComposition<UserManager> singletonComponent;
 		
 		[System.NonSerialized] public static UserManager Instance;
 
 		private void Awake()
 		{
-			_singletonComponent = new SingletonComposition<UserManager>(Instance, 
+			singletonComponent = new SingletonComposition<UserManager>(Instance, 
 				() => Instance = this,
 				() => Destroy(this.gameObject));
 
 			string fileName = $"{Application.persistentDataPath}/playerData_{gamePrefsName}.dat";
 			
-			_fileSaveSystem = new FileSaveSystem(fileName);
+			fileSaveSystem = new FileSaveSystem(fileName);
 		}
 
 		private void Start()
@@ -61,13 +61,13 @@ namespace Game
 
 		public void VisitLevel(int value)
 		{
-			if (_dataWasRead)
+			if (dataWasRead)
 			{
 				if (GetLevel() < value)
 				{
 					SetLevel(value);
 
-					_dataNeedWrite = true;
+					dataNeedWrite = true;
 				}
 
 				ResetHighScoreShowFlag();
@@ -80,20 +80,20 @@ namespace Game
 
 		private void CheckHighScore(int value)
 		{
-			if (_dataWasRead)
+			if (dataWasRead)
 			{
 				if (value > GetHighScore())
 				{
-					if (!_highScoreShowInLevel)
+					if (!highScoreShowInLevel)
 					{
-						_highScoreShowInLevel = true;
+						highScoreShowInLevel = true;
 
 						MenuManager.Instance?.ShowAdviceGameWindow("You improve Best Score!");
 					}
 
 					SetHighScore(GetScore(), true);
 
-					_dataNeedWrite = true;
+					dataNeedWrite = true;
 				}
 			}
 			else
@@ -104,7 +104,7 @@ namespace Game
 
 		private void ResetHighScoreShowFlag()
 		{
-			_highScoreShowInLevel = false;
+			highScoreShowInLevel = false;
 		}
 
 		public void SetWave(int value, bool withEvent = false)
@@ -127,18 +127,18 @@ namespace Game
 		
 		public void SavePrivateDataPlayer()
 		{
-			if (_dataWasRead)
+			if (dataWasRead)
 			{
-				if (_dataNeedWrite)
+				if (dataNeedWrite)
 				{
 					PlayerData data = new PlayerData();
 					data.playerName = playerName;
 					data.bestScore = GetHighScore();
 					data.level = GetLevel();
 
-					_fileSaveSystem.Save(data);
+					fileSaveSystem.Save(data);
 
-					_dataNeedWrite = false;
+					dataNeedWrite = false;
 				}
 			}
 			else
@@ -149,11 +149,11 @@ namespace Game
 		
 		public void LoadPrivateDataPlayer()
 		{
-			if (!_dataWasRead)
+			if (!dataWasRead)
 			{
 				PlayerData data = new PlayerData();
 
-				if (_fileSaveSystem.Load(out data))
+				if (fileSaveSystem.Load(out data))
 				{
 					playerName = data.playerName;
 					SetHighScore(data.bestScore);
@@ -164,7 +164,7 @@ namespace Game
 					GetDefaultData();
 				}
 
-				_dataWasRead = true;
+				dataWasRead = true;
 			}
 		}
 	}

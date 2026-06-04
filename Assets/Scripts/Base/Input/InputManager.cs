@@ -8,10 +8,10 @@ namespace Base.Input
 {
     public class InputManager : IInputManager
     {
-        private InputBindings inputBindings;
-        private IMouseInputHandler mouseInputHandler;
-        private Dictionary<string, UnityAction> actionMapKeyUp = new();
-        private Dictionary<string, UnityAction> actionMapKeyDown = new();
+        private readonly InputBindings inputBindings;
+        private readonly IMouseInputHandler mouseInputHandler;
+        private readonly Dictionary<string, UnityAction> actionMapKeyUp = new();
+        private readonly Dictionary<string, UnityAction> actionMapKeyDown = new();
         
         public InputManager(InputBindings inputBindings)
         {

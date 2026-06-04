@@ -17,14 +17,14 @@ namespace Base.UI.Effectors
         [SerializeField] private Image imageControl;
         [SerializeField] private Image imageBg;
 
-        private bool _rotate;
-        private float _multiplier = 1.0f;
+        private bool rotate;
+        private float multiplier = 1.0f;
         
         private void Update()
         {
-            if (_rotate)
+            if (rotate)
             {
-                rectTransformBg.Rotate(Vector3.forward, _multiplier * rotateSpeed * Time.deltaTime);
+                rectTransformBg.Rotate(Vector3.forward, multiplier * rotateSpeed * Time.deltaTime);
             }
         }
 
@@ -44,8 +44,8 @@ namespace Base.UI.Effectors
 
         public void ActivateShiftEffect(bool rotate, float multiplier)
         {
-            this._rotate = rotate;
-            this._multiplier = multiplier;
+            this.rotate = rotate;
+            this.multiplier = multiplier;
         }
         
     }

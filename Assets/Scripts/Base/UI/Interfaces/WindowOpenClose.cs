@@ -8,7 +8,7 @@ namespace Base.Utility
 		[SerializeField]
 		private bool defaultOpen;
 		
-		private bool _isOpen;
+		private bool isOpen;
 
 		private void Awake()
 		{
@@ -17,7 +17,7 @@ namespace Base.Utility
 
 		protected virtual void Init()
 		{
-			_isOpen = defaultOpen;
+			isOpen = defaultOpen;
 		}
 		
 		public void Click()
@@ -36,7 +36,7 @@ namespace Base.Utility
 		{
 			if (!IsOpen())
 			{
-				_isOpen = true;
+				isOpen = true;
 			}
 		}
 
@@ -44,13 +44,13 @@ namespace Base.Utility
 		{
 			if (IsOpen())
 			{
-				_isOpen = false;
+				isOpen = false;
 			}
 		}
 
 		public bool IsOpen()
 		{
-			return _isOpen;
+			return isOpen;
 		}
 	}
 }

@@ -30,11 +30,7 @@ namespace Base.Music
 		private void Awake ()
 		{
 			string stKey = $"{gamePrefsName}_MusicVol";
-			if (PlayerPrefs.HasKey (stKey)) {
-				volumePrefs = PlayerPrefs.GetFloat (stKey);
-			} else {
-				volumePrefs = 0.5f;
-			}
+			volumePrefs = PlayerPrefs.HasKey (stKey) ? PlayerPrefs.GetFloat (stKey) : 0.5f;
 			
 			sourceGameObject = new GameObject ("Music_" + music.name);
 			source = sourceGameObject.AddComponent<AudioSource> ();
@@ -105,10 +101,7 @@ namespace Base.Music
 
 		private void FadeIn ()
 		{
-			if (fadeTime > 0.0f)
-				volume = 0.0f;
-			else
-				volume = volumePrefs;
+			volume = fadeTime > 0.0f ? 0.0f : volumePrefs;
 
 			targetVolume = volumePrefs;
 			source.volume = volume;
@@ -116,10 +109,7 @@ namespace Base.Music
 
 		private void FadeOut ()
 		{
-			if (fadeTime > 0.0f)
-				volume = source.volume;
-			else
-				volume = 0.0f;
+			volume = fadeTime > 0.0f ? source.volume : 0.0f;
 
 			targetVolume = 0.0f;
 			source.volume = volume;

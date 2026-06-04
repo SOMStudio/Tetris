@@ -9,30 +9,30 @@ namespace Base.UI
     {
         [SerializeField] private float timeForFade = 0.4f;
     
-        private CanvasGroup _canvasGrope;
+        private CanvasGroup canvasGrope;
 
-        private Tweener _openTween;
-        private Tweener _closeTween;
+        private Tweener openTween;
+        private Tweener closeTween;
 
         protected override void Init()
         {
             base.Init();
 
-            _canvasGrope = GetComponent<CanvasGroup>();
+            canvasGrope = GetComponent<CanvasGroup>();
         
-            if (!_canvasGrope) throw new NullReferenceException();
+            if (!canvasGrope) throw new NullReferenceException();
 
             if (IsOpen())
             {
-                _canvasGrope.alpha = 1;
-                _canvasGrope.interactable = true;
-                _canvasGrope.blocksRaycasts = true;
+                canvasGrope.alpha = 1;
+                canvasGrope.interactable = true;
+                canvasGrope.blocksRaycasts = true;
             }
             else
             {
-                _canvasGrope.alpha = 0;
-                _canvasGrope.interactable = false;
-                _canvasGrope.blocksRaycasts = false;
+                canvasGrope.alpha = 0;
+                canvasGrope.interactable = false;
+                canvasGrope.blocksRaycasts = false;
             }
         }
 
@@ -42,15 +42,15 @@ namespace Base.UI
             {
                 base.Open();
 
-                if (_openTween == null)
-                    _openTween = _canvasGrope
+                if (openTween == null)
+                    openTween = canvasGrope
                         .DOFade(1, timeForFade)
                         .SetAutoKill(false);
                 else
-                    _openTween.Restart();
+                    openTween.Restart();
                 
-                _canvasGrope.interactable = true;
-                _canvasGrope.blocksRaycasts = true;
+                canvasGrope.interactable = true;
+                canvasGrope.blocksRaycasts = true;
             }
         }
 
@@ -60,22 +60,22 @@ namespace Base.UI
             {
                 base.Close();
 
-                if (_closeTween == null)
-                    _closeTween = _canvasGrope
+                if (closeTween == null)
+                    closeTween = canvasGrope
                         .DOFade(0, timeForFade)
                         .SetAutoKill(false);
                 else
-                    _closeTween.Restart();
+                    closeTween.Restart();
 
-                _canvasGrope.interactable = false;
-                _canvasGrope.blocksRaycasts = false;
+                canvasGrope.interactable = false;
+                canvasGrope.blocksRaycasts = false;
             }
         }
 
         private void OnDestroy()
         {
-            _openTween.Kill();
-            _closeTween.Kill();
+            openTween.Kill();
+            closeTween.Kill();
         }
     }
 }

@@ -6,27 +6,27 @@ namespace Base.TimeControl
 	{
 		public bool isTimerRunning;
 
-		private float _timeElapsed;
-		private float _currentTime;
-		private float _lastTime;
-		private float _timeScaleFactor = 1.0f;
+		private float timeElapsed;
+		private float currentTime;
+		private float lastTime;
+		private float timeScaleFactor = 1.0f;
 		
 		public void UpdateTimer()
 		{
-			_timeElapsed = Mathf.Abs(Time.realtimeSinceStartup - _lastTime);
+			timeElapsed = Mathf.Abs(Time.realtimeSinceStartup - lastTime);
 			
 			if (isTimerRunning)
 			{
-				_currentTime += _timeElapsed * _timeScaleFactor;
+				currentTime += timeElapsed * timeScaleFactor;
 			}
 			
-			_lastTime = Time.realtimeSinceStartup;
+			lastTime = Time.realtimeSinceStartup;
 		}
 		
 		public void StartTimer()
 		{
 			isTimerRunning = true;
-			_lastTime = Time.realtimeSinceStartup;
+			lastTime = Time.realtimeSinceStartup;
 		}
 		
 		public void StopTimer()
@@ -38,21 +38,21 @@ namespace Base.TimeControl
 		
 		public void ResetTimer()
 		{
-			_timeElapsed = 0.0f;
-			_currentTime = 0.0f;
-			_lastTime = Time.realtimeSinceStartup;
+			timeElapsed = 0.0f;
+			currentTime = 0.0f;
+			lastTime = Time.realtimeSinceStartup;
 			
 			UpdateTimer();
 		}
 		
 		public float GetTime()
 		{
-			return _currentTime;
+			return currentTime;
 		}
 		
 		public string GetFormattedTime(string format)
 		{
-			return TimeHelp.GetFormattedTime(_currentTime);
+			return TimeHelp.GetFormattedTime(currentTime);
 		}
 	}
 }

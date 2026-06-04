@@ -6,10 +6,10 @@ namespace Base.Optimization
 {
 	public class ObjectPool : MonoBehaviour {
 
-		private static readonly Dictionary<string, ObjectPool> namesOfObjects = new();
+		private static readonly Dictionary<string, ObjectPool> NamesOfObjects = new();
 
 		public static ObjectPool GetPoolByName(string name) {
-			return namesOfObjects[name];
+			return NamesOfObjects[name];
 		}
 
 		[SerializeField]
@@ -30,12 +30,12 @@ namespace Base.Optimization
 		[SerializeField]
 		private bool useAdjustLiberate;
 		
-		private readonly Queue<Transform> _yourObjectsStack = new();
-		private readonly Dictionary<Transform, IPoolObject> _yourObjectsInterface = new();
+		private readonly Queue<Transform> yourObjectsStack = new();
+		private readonly Dictionary<Transform, IPoolObject> yourObjectsInterface = new();
 
 		private void Awake()
 		{
-			namesOfObjects[nameOfYourPool] = this;
+			NamesOfObjects[nameOfYourPool] = this;
 		}
 
 		private void Start()
@@ -56,8 +56,8 @@ namespace Base.Optimization
 		{
 			Transform t = null;
 
-			if (_yourObjectsStack.Count > 0) {
-				t = _yourObjectsStack.Dequeue ();
+			if (yourObjectsStack.Count > 0) {
+				t = yourObjectsStack.Dequeue ();
 			} else {
 				t = Instantiate (yourPoolPrefab);
 				
@@ -77,23 +77,23 @@ namespace Base.Optimization
 		{
 			var objPool = t.GetComponent<IPoolObject>();
 			if (objPool != null)
-				_yourObjectsInterface.Add(t, objPool);
+				yourObjectsInterface.Add(t, objPool);
 		}
 
 		private void OnPoolAdjusting(Transform obj)
 		{
-			if (_yourObjectsInterface.ContainsKey(obj))
+			if (yourObjectsInterface.ContainsKey(obj))
 			{
-				var result = _yourObjectsInterface[obj];
+				var result = yourObjectsInterface[obj];
 				result.OnPoolAdjusting(this);
 			}
 		}
 		
 		private void OnPoolLiberation(Transform obj)
 		{
-			if (_yourObjectsInterface.ContainsKey(obj))
+			if (yourObjectsInterface.ContainsKey(obj))
 			{
-				var result = _yourObjectsInterface[obj];
+				var result = yourObjectsInterface[obj];
 				result.OnPoolLiberation(this);
 			}
 		}
@@ -122,7 +122,7 @@ namespace Base.Optimization
 			else
 				obj.gameObject.SetActive(false);
 
-			_yourObjectsStack.Enqueue(obj);
+			yourObjectsStack.Enqueue(obj);
 		}
 	}
 }

@@ -16,14 +16,14 @@ namespace Base.Input
 
 		private InputBindings inputBindings;
 		private IMouseInputHandler mouseInputHandler;
-		private Dictionary<string, UnityAction> actionMapKeyUp = new();
-		private Dictionary<string, UnityAction> actionMapKeyDown = new();
+		private readonly Dictionary<string, UnityAction> actionMapKeyUp = new();
+		private readonly Dictionary<string, UnityAction> actionMapKeyDown = new();
 		
-		private Vector2 _shiftClick;
-		private Vector2 _startPosition = Vector2.zero;
+		private Vector2 shiftClick;
+		private Vector2 startPosition = Vector2.zero;
 
-		private float _vertical;
-		private float _horizontal;
+		private float vertical;
+		private float horizontal;
 
 		public void InitBindings(InputBindings inputBindings)
 		{
@@ -36,10 +36,10 @@ namespace Base.Input
 		}
 
 		public void OnPointerDown (PointerEventData data) {
-			if (_startPosition == Vector2.zero)
-				_startPosition = new Vector2(myTransform.position.x, myTransform.position.y);
+			if (startPosition == Vector2.zero)
+				startPosition = new Vector2(myTransform.position.x, myTransform.position.y);
 			
-			_shiftClick = data.position - _startPosition;
+			shiftClick = data.position - startPosition;
 
 			if (inputBindings == null) return;
 			
@@ -53,22 +53,22 @@ namespace Base.Input
 		}
 
 		public void OnDrag(PointerEventData data) {
-			Vector2 vectorToPoint = data.position - _startPosition;
+			Vector2 vectorToPoint = data.position - startPosition;
 			Vector2 dirToPoint = vectorToPoint.normalized;
 			float distanceToPoint = Mathf.Clamp (vectorToPoint.magnitude, -slideClump, slideClump);
 			Vector2 controlPos = dirToPoint * distanceToPoint;
 			
-			_vertical = controlPos.y / slideClump;
-			_horizontal = controlPos.x / slideClump;
+			vertical = controlPos.y / slideClump;
+			horizontal = controlPos.x / slideClump;
 			
-			myTransform.position = new Vector3 (_startPosition.x + controlPos.x, _startPosition.y + controlPos.y, myTransform.position.z);
+			myTransform.position = new Vector3 (startPosition.x + controlPos.x, startPosition.y + controlPos.y, myTransform.position.z);
 		}
 
 		public void OnPointerUp (PointerEventData data) {
-			myTransform.position = new Vector3(_startPosition.x, _startPosition.y, myTransform.position.z);
+			myTransform.position = new Vector3(startPosition.x, startPosition.y, myTransform.position.z);
 			
-			_vertical = 0f;
-			_horizontal = 0f;
+			vertical = 0f;
+			horizontal = 0f;
 
 			if (inputBindings == null) return;
 			
@@ -95,10 +95,10 @@ namespace Base.Input
 		{
 			if (axisName == "Horizontal")
 			{
-				return _horizontal;
+				return horizontal;
 			} else if (axisName == "Vertical")
 			{
-				return _vertical;
+				return vertical;
 			}
 
 			throw new NotImplementedException();

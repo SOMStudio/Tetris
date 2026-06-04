@@ -10,35 +10,35 @@ namespace Base.UI
         [SerializeField] private Vector2 directionShift;
         [SerializeField] private float timeForShift = 0.4f;
     
-        private CanvasGroup _canvasGrope;
-        private RectTransform _rectTransform;
+        private CanvasGroup canvasGrope;
+        private RectTransform rectTransform;
 
-        private Tweener _openTween;
-        private Tweener _closeTween;
+        private Tweener openTween;
+        private Tweener closeTween;
 
         protected override void Init()
         {
             base.Init();
 
-            _canvasGrope = GetComponent<CanvasGroup>();
+            canvasGrope = GetComponent<CanvasGroup>();
         
-            if (!_canvasGrope) throw new NullReferenceException();
+            if (!canvasGrope) throw new NullReferenceException();
 
-            _rectTransform = GetComponent<RectTransform>();
+            rectTransform = GetComponent<RectTransform>();
 
             if (IsOpen())
             {
-                _rectTransform.anchoredPosition = Vector2.zero;
+                rectTransform.anchoredPosition = Vector2.zero;
                 
-                _canvasGrope.interactable = true;
-                _canvasGrope.blocksRaycasts = true;
+                canvasGrope.interactable = true;
+                canvasGrope.blocksRaycasts = true;
             }
             else
             {
-                _rectTransform.anchoredPosition = directionShift;
+                rectTransform.anchoredPosition = directionShift;
                 
-                _canvasGrope.interactable = false;
-                _canvasGrope.blocksRaycasts = false;
+                canvasGrope.interactable = false;
+                canvasGrope.blocksRaycasts = false;
             }
         }
 
@@ -48,15 +48,15 @@ namespace Base.UI
             {
                 base.Open();
 
-                if (_openTween == null)
-                    _openTween = _rectTransform
+                if (openTween == null)
+                    openTween = rectTransform
                         .DOAnchorPos(Vector2.zero, timeForShift)
                         .SetAutoKill(false);
                 else
-                    _openTween.Restart();
+                    openTween.Restart();
 
-                _canvasGrope.interactable = true;
-                _canvasGrope.blocksRaycasts = true;
+                canvasGrope.interactable = true;
+                canvasGrope.blocksRaycasts = true;
             }
         }
 
@@ -66,22 +66,22 @@ namespace Base.UI
             {
                 base.Close();
 
-                if (_closeTween == null)
-                    _closeTween = _rectTransform
+                if (closeTween == null)
+                    closeTween = rectTransform
                         .DOAnchorPos(directionShift, timeForShift)
                         .SetAutoKill(false);
                 else
-                    _closeTween.Restart();
+                    closeTween.Restart();
             
-                _canvasGrope.interactable = false;
-                _canvasGrope.blocksRaycasts = false;
+                canvasGrope.interactable = false;
+                canvasGrope.blocksRaycasts = false;
             }
         }
 
         private void OnDestroy()
         {
-            _openTween.Kill();
-            _closeTween.Kill();
+            openTween.Kill();
+            closeTween.Kill();
         }
     }
 }

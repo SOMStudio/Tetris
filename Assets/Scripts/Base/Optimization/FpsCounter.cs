@@ -11,7 +11,7 @@ namespace Base.Optimization
 		[SerializeField] private Text minFpsText;
 		[SerializeField] private Text maxFpsText;
 
-		private const float fpsMeasurePeriod = 0.5f;
+		private const float FPSMeasurePeriod = 0.5f;
 		private int fpsAccumulator;
 		private float fpsNextPeriod;
 		private int currentFps;
@@ -20,7 +20,7 @@ namespace Base.Optimization
 
 		private void Start()
 		{
-			fpsNextPeriod = Time.realtimeSinceStartup + fpsMeasurePeriod;
+			fpsNextPeriod = Time.realtimeSinceStartup + FPSMeasurePeriod;
 		}
 
 		private void Update()
@@ -28,7 +28,7 @@ namespace Base.Optimization
 			fpsAccumulator++;
 			if (Time.realtimeSinceStartup > fpsNextPeriod)
 			{
-				currentFps = (int) (fpsAccumulator/fpsMeasurePeriod);
+				currentFps = (int) (fpsAccumulator/FPSMeasurePeriod);
 
 				if (Time.realtimeSinceStartup > 20) {
 					if (minFPS == -1) {
@@ -43,7 +43,7 @@ namespace Base.Optimization
 				}
 
 				fpsAccumulator = 0;
-				fpsNextPeriod += fpsMeasurePeriod;
+				fpsNextPeriod += FPSMeasurePeriod;
 
 				
 				fpsText.text = $"FPS:{currentFps}";

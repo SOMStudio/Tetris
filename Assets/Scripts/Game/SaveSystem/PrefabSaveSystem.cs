@@ -7,9 +7,9 @@ namespace Game.SaveSystem
 {
     public class PrefabSaveSystem : BasePrefabSaveSystem
     {
-        private bool _mutedVolume;
-        private float _soundVolumeSave;
-        private float _musicVolumeSave;
+        private bool mutedVolume;
+        private float soundVolumeSave;
+        private float musicVolumeSave;
 
         public event UnityAction<bool> MuteUnmuteVolumeEvent;
     
@@ -51,66 +51,66 @@ namespace Game.SaveSystem
                 ChangeMusicValueEvent += MusicManager.Instance.UpdateVolume;
         }
 
-        public bool MutedVolume => _mutedVolume;
+        public bool MutedVolume => mutedVolume;
 
         private void MuteVolumeRestore()
         {
             if (audioSoundSliderValue == 0.0f)
             {
-                _mutedVolume = true;
+                mutedVolume = true;
             }
         
-            MuteUnmuteVolumeEvent?.Invoke(_mutedVolume);
+            MuteUnmuteVolumeEvent?.Invoke(mutedVolume);
         }
     
         private void MuteVolumeReset()
         {
-            if (_mutedVolume)
+            if (mutedVolume)
             {
-                _mutedVolume = false;
-                MuteUnmuteVolumeEvent?.Invoke(_mutedVolume);
+                mutedVolume = false;
+                MuteUnmuteVolumeEvent?.Invoke(mutedVolume);
             }
         }
     
         public void MuteVolume()
         {
-            if (!_mutedVolume)
+            if (!mutedVolume)
             {
                 if (audioSoundSliderValue > 0.0f)
                 {
-                    _soundVolumeSave = audioSoundSliderValue;
+                    soundVolumeSave = audioSoundSliderValue;
                 }
                 if (audioMusicSliderValue > 0.0f)
                 {
-                    _musicVolumeSave = audioMusicSliderValue;
+                    musicVolumeSave = audioMusicSliderValue;
                 }
             
                 ChangeSoundVal(0f);
                 ChangeMusicVal(0f);
             
-                _mutedVolume = true;
-                MuteUnmuteVolumeEvent?.Invoke(_mutedVolume);
+                mutedVolume = true;
+                MuteUnmuteVolumeEvent?.Invoke(mutedVolume);
             }
         }
         
         public void UnmuteVolume()
         {
-            if (_mutedVolume)
+            if (mutedVolume)
             {
                 if (audioSoundSliderValue == 0.0f)
                 {
-                    _soundVolumeSave = 0.4f;
+                    soundVolumeSave = 0.4f;
                 }
                 if (audioMusicSliderValue == 0.0f)
                 {
-                    _musicVolumeSave = 0.2f;
+                    musicVolumeSave = 0.2f;
                 }
             
-                ChangeSoundVal(_soundVolumeSave);
-                ChangeMusicVal(_musicVolumeSave);
+                ChangeSoundVal(soundVolumeSave);
+                ChangeMusicVal(musicVolumeSave);
             
-                _mutedVolume = false;
-                MuteUnmuteVolumeEvent?.Invoke(_mutedVolume);
+                mutedVolume = false;
+                MuteUnmuteVolumeEvent?.Invoke(mutedVolume);
             }
         }
 
