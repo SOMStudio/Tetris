@@ -1,9 +1,9 @@
 ﻿using System;
-using Base.Utility;
 using DG.Tweening;
+using SOMStudio.Tetris.Scripts.Base.UI.Interfaces;
 using UnityEngine;
 
-namespace Base.UI
+namespace SOMStudio.Tetris.Scripts.Base.UI
 {
     public class WindowOpenCloseWithShift : WindowOpenClose
     {

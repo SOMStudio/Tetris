@@ -1,10 +1,10 @@
+using SOMStudio.Tetris.Scripts.Base.Data.GameData.DevScripts;
+using SOMStudio.Tetris.Scripts.Base.Data.GameLogic.DevScripts;
+using SOMStudio.Tetris.Scripts.Base.Data.LevelListData.DevScripts;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using Base.Data.GameData.DevScripts;
-using Base.Data.GameLogic.DevScripts;
-using Base.Data.LevelListData.DevScripts;
 
-namespace Base
+namespace SOMStudio.Tetris.Scripts.Base
 {
 	public abstract class BaseGameController : MonoBehaviour
 	{

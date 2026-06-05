@@ -1,11 +1,11 @@
-﻿using Base;
-using Base.Resource;
-using Base.SaveSystem;
-using Base.SaveSystem.Interfaces;
-using Base.Utility;
+﻿using SOMStudio.Tetris.Scripts.Base;
+using SOMStudio.Tetris.Scripts.Base.Resource;
+using SOMStudio.Tetris.Scripts.Base.SaveSystem;
+using SOMStudio.Tetris.Scripts.Base.SaveSystem.Interfaces;
+using SOMStudio.Tetris.Scripts.Base.Utility;
 using UnityEngine;
 
-namespace Game
+namespace SOMStudio.Tetris.Scripts.Game
 {
 	public class UserManager : BaseUserManager
 	{

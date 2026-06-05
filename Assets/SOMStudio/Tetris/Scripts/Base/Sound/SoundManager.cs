@@ -1,8 +1,8 @@
 using System.Collections.Generic;
-using Base.Utility;
+using SOMStudio.Tetris.Scripts.Base.Utility;
 using UnityEngine;
 
-namespace Base.Sound
+namespace SOMStudio.Tetris.Scripts.Base.Sound
 {
 	[AddComponentMenu("SOMStudio/Tetris/Base/Sound Manager")]
 	public class SoundManager : SingletonMonoBehaviour<SoundManager>

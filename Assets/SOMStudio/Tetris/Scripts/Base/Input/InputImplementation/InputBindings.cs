@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace Base.Input.InputImplementation
+namespace SOMStudio.Tetris.Scripts.Base.Input.InputImplementation
 {
     public class InputBindings
     {

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
 
-namespace Base.Input.Interfaces
+namespace SOMStudio.Tetris.Scripts.Base.Input.Interfaces
 {
     public interface IInputManager
     {

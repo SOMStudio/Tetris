@@ -1,7 +1,7 @@
-﻿using Base.Input.InputImplementation;
+﻿using SOMStudio.Tetris.Scripts.Base.Input.InputImplementation;
 using UnityEngine;
 
-namespace Base.Input.Samples
+namespace SOMStudio.Tetris.Scripts.Base.Input.Samples
 {
     public class SampleBindings : InputBindings
     {

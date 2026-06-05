@@ -1,9 +1,9 @@
 ﻿using System;
-using Base.Data.GameData.DevScripts;
+using SOMStudio.Tetris.Scripts.Base.Data.GameData.DevScripts;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-namespace Tetris.GameData.DevScripts
+namespace SOMStudio.Tetris.Scripts.Game.GameData.DevScripts
 {
     [Serializable]
     public class GameData : BaseData

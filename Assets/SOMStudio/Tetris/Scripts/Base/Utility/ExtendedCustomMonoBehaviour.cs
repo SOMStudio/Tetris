@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Base.Utility
+namespace SOMStudio.Tetris.Scripts.Base.Utility
 {
 	public class ExtendedCustomMonoBehaviour : MonoBehaviour
 	{

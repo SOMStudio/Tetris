@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-namespace Base.UI.Effectors
+namespace SOMStudio.Tetris.Scripts.Base.UI.Effectors
 {
     public class InputEffector : MonoBehaviour
     {

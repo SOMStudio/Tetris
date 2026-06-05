@@ -1,4 +1,4 @@
-﻿namespace Base.Optimization.Interfaces
+﻿namespace SOMStudio.Tetris.Scripts.Base.Optimization.Interfaces
 {
     interface IPoolObject
     {

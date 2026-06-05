@@ -1,12 +1,11 @@
-﻿using Base.Utility;
+﻿using SOMStudio.Tetris.Scripts.Base.Text;
+using SOMStudio.Tetris.Scripts.Base.UI.Interfaces;
 using TMPro;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
-#if UNITY_EDITOR
-using UnityEditor;
-#endif
 
-namespace Base
+namespace SOMStudio.Tetris.Scripts.Base
 {
 	public abstract class BaseMenuManager : MonoBehaviour
 	{

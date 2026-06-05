@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using Base.Optimization.Interfaces;
+using SOMStudio.Tetris.Scripts.Base.Optimization.Interfaces;
 using UnityEngine;
 
-namespace Base.Optimization
+namespace SOMStudio.Tetris.Scripts.Base.Optimization
 {
 	public class ObjectPool : MonoBehaviour {
 

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Base.Data.GameData.DevScripts
+namespace SOMStudio.Tetris.Scripts.Base.Data.GameData.DevScripts
 {
     public class BaseData
     {

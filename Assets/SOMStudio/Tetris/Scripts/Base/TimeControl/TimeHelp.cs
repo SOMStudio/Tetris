@@ -1,4 +1,4 @@
-﻿namespace Base.TimeControl
+﻿namespace SOMStudio.Tetris.Scripts.Base.TimeControl
 {
 	public static class TimeHelp
 	{		

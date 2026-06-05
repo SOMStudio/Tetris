@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
-using Base.Input.InputImplementation;
-using Base.Input.Interfaces;
+using SOMStudio.Tetris.Scripts.Base.Input.InputImplementation;
+using SOMStudio.Tetris.Scripts.Base.Input.Interfaces;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Base.Input
+namespace SOMStudio.Tetris.Scripts.Base.Input
 {
     public class InputManager : IInputManager
     {

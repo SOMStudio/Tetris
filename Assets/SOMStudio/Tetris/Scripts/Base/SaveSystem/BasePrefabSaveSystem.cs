@@ -2,7 +2,7 @@
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace Base.SaveSystem
+namespace SOMStudio.Tetris.Scripts.Base.SaveSystem
 {
     public class BasePrefabSaveSystem : MonoBehaviour
     {

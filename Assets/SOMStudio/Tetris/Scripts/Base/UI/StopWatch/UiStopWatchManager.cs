@@ -1,7 +1,7 @@
 ﻿using TMPro;
 using UnityEngine;
 
-namespace Base.UI.StopWatch
+namespace SOMStudio.Tetris.Scripts.Base.UI.StopWatch
 {
     public class UiStopWatchManager : MonoBehaviour
     {

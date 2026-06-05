@@ -1,15 +1,14 @@
 using UnityEngine;
-using UnityEngine.UI;
 
-namespace Base.Optimization
+namespace SOMStudio.Tetris.Scripts.Base.Optimization
 {
 	[AddComponentMenu("SOMStudio/Tetris/Utility/FPS counter")]
 	public class FpsCounter : MonoBehaviour
 	{
 		[Header("Settings")]
-		[SerializeField] private Text fpsText;
-		[SerializeField] private Text minFpsText;
-		[SerializeField] private Text maxFpsText;
+		[SerializeField] private UnityEngine.UI.Text fpsText;
+		[SerializeField] private UnityEngine.UI.Text minFpsText;
+		[SerializeField] private UnityEngine.UI.Text maxFpsText;
 
 		private const float FPSMeasurePeriod = 0.5f;
 		private int fpsAccumulator;

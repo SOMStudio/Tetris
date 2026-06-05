@@ -1,7 +1,7 @@
-﻿using Base.Data.GameData.DevScripts;
+﻿using SOMStudio.Tetris.Scripts.Base.Data.GameData.DevScripts;
 using UnityEngine;
 
-namespace Tetris.GameData.DevScripts
+namespace SOMStudio.Tetris.Scripts.Game.GameData.DevScripts
 {
     [CreateAssetMenu(fileName = "New GameDataTemplate", menuName = "SOMStudio/Tetris/Create Game Data Template")]
     public class GameDataTemplate : BaseDataTemplate

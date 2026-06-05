@@ -1,6 +1,6 @@
 using UnityEngine.Events;
 
-namespace Game.Menu
+namespace SOMStudio.Tetris.Scripts.Game.Menu
 {
     public interface IGameMenu
     {

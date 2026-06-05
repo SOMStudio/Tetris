@@ -1,15 +1,14 @@
 ﻿using System;
-using Base;
-using Base.Optimization;
-using Base.Utility;
-using Tetris.GameLogic.DevScripts;
-using Game;
-using Game.Menu;
-using Tetris.Spawn;
-using Tetris.UI;
+using SOMStudio.Tetris.Scripts.Base;
+using SOMStudio.Tetris.Scripts.Base.Optimization;
+using SOMStudio.Tetris.Scripts.Base.Utility;
+using SOMStudio.Tetris.Scripts.Game.GameLogic.DevScripts;
+using SOMStudio.Tetris.Scripts.Game.Menu;
+using SOMStudio.Tetris.Scripts.Game.Spawn;
+using SOMStudio.Tetris.Scripts.Game.UI;
 using UnityEngine;
 
-namespace Tetris
+namespace SOMStudio.Tetris.Scripts.Game
 {
     public class LevelManager : BaseLevelManager
     {
@@ -35,7 +34,7 @@ namespace Tetris
         private IGameMenu gameMenu;
         private BaseGameController gameController;
         
-        private GameData.DevScripts.GameData gameData;
+        private global::SOMStudio.Tetris.Scripts.Game.GameData.DevScripts.GameData gameData;
         private GameLogicScript gameLogicScript;
 
         private bool startLevel;
@@ -75,7 +74,7 @@ namespace Tetris
                 gameController = GameController.Instance;
                 gameController.SetLevelManager(this);
 
-                gameData = (GameData.DevScripts.GameData)gameController.GameData.Data;
+                gameData = (global::SOMStudio.Tetris.Scripts.Game.GameData.DevScripts.GameData)gameController.GameData.Data;
                 gameLogicScript = (GameLogicScript)gameController.GameLogicScript.Script;
 
                 timeManager.controlEvent.AddListener(playFieldManager.MobileControl);

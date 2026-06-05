@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace Base.UI.Content
+namespace SOMStudio.Tetris.Scripts.Base.UI.Content
 {
     public sealed class UiChildContentManager : MonoBehaviour
     {

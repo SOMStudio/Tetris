@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using Base.Input.InputImplementation;
-using Base.Input.Interfaces;
-using Base.Utility;
+using SOMStudio.Tetris.Scripts.Base.Input.InputImplementation;
+using SOMStudio.Tetris.Scripts.Base.Input.Interfaces;
+using SOMStudio.Tetris.Scripts.Base.Utility;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
-namespace Base.Input
+namespace SOMStudio.Tetris.Scripts.Base.Input
 {
 	public class InputSlideUi4Way : ExtendedCustomMonoBehaviour, IInputManager, IPointerDownHandler, IDragHandler, IPointerUpHandler {
 

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Base
+namespace SOMStudio.Tetris.Scripts.Base
 {
     public abstract class BaseLevelManager : MonoBehaviour
     {

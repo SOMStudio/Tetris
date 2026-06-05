@@ -1,7 +1,7 @@
-using Base.Resource;
+using SOMStudio.Tetris.Scripts.Base.Resource;
 using UnityEngine;
 
-namespace Base
+namespace SOMStudio.Tetris.Scripts.Base
 {
 	[AddComponentMenu("SOMStudio/Tetris/Base/User Manager")]
 	public class BaseUserManager : MonoBehaviour

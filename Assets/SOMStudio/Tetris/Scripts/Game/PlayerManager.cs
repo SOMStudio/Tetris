@@ -1,13 +1,12 @@
-﻿using Base.Input;
-using Base.Input.Interfaces;
-using Base.Input.Samples;
-using Base.Sound;
-using Base.UI.Effectors;
-using Base.Utility;
-using Game;
+﻿using SOMStudio.Tetris.Scripts.Base.Input;
+using SOMStudio.Tetris.Scripts.Base.Input.Interfaces;
+using SOMStudio.Tetris.Scripts.Base.Input.Samples;
+using SOMStudio.Tetris.Scripts.Base.Sound;
+using SOMStudio.Tetris.Scripts.Base.UI.Effectors;
+using SOMStudio.Tetris.Scripts.Base.Utility;
 using UnityEngine;
 
-namespace Tetris
+namespace SOMStudio.Tetris.Scripts.Game
 {
     public class PlayerManager : ExtendedCustomMonoBehaviour
     {

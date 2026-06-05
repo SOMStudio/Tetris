@@ -1,7 +1,7 @@
 ﻿using TMPro;
 using UnityEngine;
 
-namespace Base.UI.HudPanel
+namespace SOMStudio.Tetris.Scripts.Base.UI.HudPanel
 {
     public class HudLifeScoreManager : MonoBehaviour
     {

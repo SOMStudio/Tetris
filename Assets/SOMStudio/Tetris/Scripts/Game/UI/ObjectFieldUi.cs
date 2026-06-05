@@ -1,9 +1,9 @@
 ﻿using System.Linq;
-using Tetris.Field;
+using SOMStudio.Tetris.Scripts.Game.Field;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Tetris.UI
+namespace SOMStudio.Tetris.Scripts.Game.UI
 {
     public class ObjectFieldUi : MonoBehaviour
     {

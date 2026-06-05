@@ -1,18 +1,17 @@
 ﻿using System;
-using Base;
-using Base.Data.GameData.DevScripts;
-using Base.Data.GameLogic.DevScripts;
-using Base.Data.LevelListData.DevScripts;
-using Game;
+using SOMStudio.Tetris.Scripts.Base;
+using SOMStudio.Tetris.Scripts.Base.Data.GameData.DevScripts;
+using SOMStudio.Tetris.Scripts.Base.Data.GameLogic.DevScripts;
+using SOMStudio.Tetris.Scripts.Base.Data.LevelListData.DevScripts;
 using UnityEngine;
 
-namespace Tetris.GameLogic.DevScripts
+namespace SOMStudio.Tetris.Scripts.Game.GameLogic.DevScripts
 {
     [Serializable]
     public class GameLogicScript : BaseLogicScript
     {
-        private Tetris.GameData.DevScripts.GameData gameData;
-        private Tetris.LevelManager levelManager;
+        private SOMStudio.Tetris.Scripts.Game.GameData.DevScripts.GameData gameData;
+        private LevelManager levelManager;
 
         private BaseGameController gameController;
         
@@ -22,7 +21,7 @@ namespace Tetris.GameLogic.DevScripts
         {
             this.gameController = gameControllerSet;
             
-            gameData = (Tetris.GameData.DevScripts.GameData)gameDataSet.Data;
+            gameData = (SOMStudio.Tetris.Scripts.Game.GameData.DevScripts.GameData)gameDataSet.Data;
         }
         
         public override void InitLevelRules(BaseLevelManager levelManagerSet, BaseLevelData levelDataNew = null)

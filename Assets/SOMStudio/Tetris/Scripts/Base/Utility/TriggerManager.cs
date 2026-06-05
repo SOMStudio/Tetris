@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Base.Utility
+namespace SOMStudio.Tetris.Scripts.Base.Utility
 {
     public sealed class TriggerManager : MonoBehaviour
     {

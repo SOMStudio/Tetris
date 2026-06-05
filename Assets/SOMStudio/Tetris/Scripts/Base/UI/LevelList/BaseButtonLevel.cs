@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace Base.UI.LevelList
+namespace SOMStudio.Tetris.Scripts.Base.UI.LevelList
 {
     public class BaseButtonLevel : MonoBehaviour
     {

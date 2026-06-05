@@ -1,8 +1,8 @@
 ﻿using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
-using Base.SaveSystem.Interfaces;
+using SOMStudio.Tetris.Scripts.Base.SaveSystem.Interfaces;
 
-namespace Base.SaveSystem
+namespace SOMStudio.Tetris.Scripts.Base.SaveSystem
 {
     public class FileSaveSystem : ISaveSystem
     {

@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using Base.Optimization;
-using Game;
-using Tetris.Field;
+using SOMStudio.Tetris.Scripts.Base.Optimization;
+using SOMStudio.Tetris.Scripts.Game.Field;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Tetris
+namespace SOMStudio.Tetris.Scripts.Game
 {
     public class PlayFieldManager : MonoBehaviour
     {
@@ -22,7 +21,7 @@ namespace Tetris
         private GameController gameController;
         private LevelManager levelManager;
 
-        private GameData.DevScripts.GameData gameDate;
+        private global::SOMStudio.Tetris.Scripts.Game.GameData.DevScripts.GameData gameDate;
         private PlayerManager playerManager;
 
         private ObjectPool objectPool;
@@ -35,7 +34,7 @@ namespace Tetris
             gameController = GameController.Instance;
             levelManager = LevelManager.Instance;
 
-            gameDate = (GameData.DevScripts.GameData) gameController.GameData.Data;
+            gameDate = (global::SOMStudio.Tetris.Scripts.Game.GameData.DevScripts.GameData) gameController.GameData.Data;
             playerManager = LevelManager.Instance.PlayerManager;
 
             objectPool = ObjectPool.GetPoolByName("ObjectPoints");

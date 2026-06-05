@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace Base.Music
+namespace SOMStudio.Tetris.Scripts.Base.Music
 {
 	[AddComponentMenu("SOMStudio/Tetris/Base/Music Clip")]
 	public class MusicClipManager : MonoBehaviour {

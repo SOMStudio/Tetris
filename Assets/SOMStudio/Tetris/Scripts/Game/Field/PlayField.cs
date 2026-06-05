@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using Random = UnityEngine.Random;
 
-namespace Tetris.Field
+namespace SOMStudio.Tetris.Scripts.Game.Field
 {
     public class PlayField
     {

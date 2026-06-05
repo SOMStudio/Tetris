@@ -1,9 +1,9 @@
 ﻿using System;
-using Base.Resource.Interfaces;
+using SOMStudio.Tetris.Scripts.Base.Resource.Interfaces;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Base.Resource
+namespace SOMStudio.Tetris.Scripts.Base.Resource
 {
     [Serializable]
     public class FloatResource : IResource<float>

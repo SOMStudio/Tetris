@@ -1,9 +1,9 @@
-﻿using Base.Music;
-using Base.SaveSystem;
-using Base.Sound;
+﻿using SOMStudio.Tetris.Scripts.Base.Music;
+using SOMStudio.Tetris.Scripts.Base.SaveSystem;
+using SOMStudio.Tetris.Scripts.Base.Sound;
 using UnityEngine.Events;
 
-namespace Game.SaveSystem
+namespace SOMStudio.Tetris.Scripts.Game.SaveSystem
 {
     public class PrefabSaveSystem : BasePrefabSaveSystem
     {

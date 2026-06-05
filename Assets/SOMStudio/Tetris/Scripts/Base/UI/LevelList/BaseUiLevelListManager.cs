@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
-using Base.Sound;
-using Game;
+using SOMStudio.Tetris.Scripts.Base.Sound;
+using SOMStudio.Tetris.Scripts.Base.UI.Content;
+using SOMStudio.Tetris.Scripts.Game;
 using UnityEngine;
-using Base.UI.Content;
 
-namespace Base.UI.LevelList
+namespace SOMStudio.Tetris.Scripts.Base.UI.LevelList
 {
     public class BaseUiLevelListManager : MonoBehaviour
     {

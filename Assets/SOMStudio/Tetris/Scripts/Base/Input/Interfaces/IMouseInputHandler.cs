@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Base.Input.Interfaces
+namespace SOMStudio.Tetris.Scripts.Base.Input.Interfaces
 {
     public interface IMouseInputHandler
     {

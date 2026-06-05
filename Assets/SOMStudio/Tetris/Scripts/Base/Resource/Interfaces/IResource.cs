@@ -1,6 +1,6 @@
 ﻿using UnityEngine.Events;
 
-namespace Base.Resource.Interfaces
+namespace SOMStudio.Tetris.Scripts.Base.Resource.Interfaces
 {
 	interface IResource<T> where T : struct
 	{

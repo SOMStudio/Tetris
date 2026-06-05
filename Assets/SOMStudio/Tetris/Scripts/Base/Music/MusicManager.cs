@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using Base.Utility;
+using SOMStudio.Tetris.Scripts.Base.Utility;
 using UnityEngine;
 
-namespace Base.Music
+namespace SOMStudio.Tetris.Scripts.Base.Music
 {
 	[AddComponentMenu("SOMStudio/Tetris/Base/Music Manager")]
 	public class MusicManager : SingletonMonoBehaviour<MusicManager> {

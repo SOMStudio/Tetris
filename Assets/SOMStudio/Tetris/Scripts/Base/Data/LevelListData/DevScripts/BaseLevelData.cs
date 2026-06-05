@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Base.Data.LevelListData.DevScripts
+namespace SOMStudio.Tetris.Scripts.Base.Data.LevelListData.DevScripts
 {
     public abstract class BaseLevelData
     {

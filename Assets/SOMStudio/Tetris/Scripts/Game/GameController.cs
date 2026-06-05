@@ -1,10 +1,10 @@
-﻿using Base;
-using Base.Utility;
-using Game.Menu;
+﻿using SOMStudio.Tetris.Scripts.Base;
+using SOMStudio.Tetris.Scripts.Base.Utility;
+using SOMStudio.Tetris.Scripts.Game.Menu;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Game
+namespace SOMStudio.Tetris.Scripts.Game
 {
     [AddComponentMenu("SOMStudio/Tetris/GameController")]
     public class GameController : BaseGameController

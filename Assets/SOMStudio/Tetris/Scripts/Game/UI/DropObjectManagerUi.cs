@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using Tetris.Field;
+using SOMStudio.Tetris.Scripts.Game.Field;
 using UnityEngine;
 
-namespace Tetris.UI
+namespace SOMStudio.Tetris.Scripts.Game.UI
 {
     public class DropObjectManagerUi : MonoBehaviour
     {

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Base.TimeControl
+namespace SOMStudio.Tetris.Scripts.Base.TimeControl
 {
 	public class TimerClass
 	{

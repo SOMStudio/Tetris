@@ -1,9 +1,8 @@
-﻿using Base.TimeControl;
-using Game;
+﻿using SOMStudio.Tetris.Scripts.Base.TimeControl;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Tetris.Spawn
+namespace SOMStudio.Tetris.Scripts.Game.Spawn
 {
     public class TimeManager : MonoBehaviour
     {
@@ -24,7 +23,7 @@ namespace Tetris.Spawn
         private int numberWave = 1;
         private float timeChangeWaveCheck;
 
-        private GameData.DevScripts.GameData gameData;
+        private SOMStudio.Tetris.Scripts.Game.GameData.DevScripts.GameData gameData;
     
         private TimerClass timer;
 
@@ -38,7 +37,7 @@ namespace Tetris.Spawn
 
         private void Start()
         {
-            gameData = (GameData.DevScripts.GameData) GameController.Instance.GameData.Data;
+            gameData = (SOMStudio.Tetris.Scripts.Game.GameData.DevScripts.GameData) GameController.Instance.GameData.Data;
         
             timer = new TimerClass();
             timer.ResetTimer();

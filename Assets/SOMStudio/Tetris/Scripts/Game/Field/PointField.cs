@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace Tetris.Field
+namespace SOMStudio.Tetris.Scripts.Game.Field
 {
     public struct PointField
     {

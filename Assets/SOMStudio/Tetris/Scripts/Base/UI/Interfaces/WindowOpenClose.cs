@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Base.Utility
+namespace SOMStudio.Tetris.Scripts.Base.UI.Interfaces
 {
 	[AddComponentMenu("SOMStudio/Tetris/Utility/Window Open-Close")]
 	public class WindowOpenClose : MonoBehaviour

@@ -1,7 +1,7 @@
-﻿using Tetris.Field;
+﻿using SOMStudio.Tetris.Scripts.Game.Field;
 using UnityEngine;
 
-namespace Tetris
+namespace SOMStudio.Tetris.Scripts.Game
 {
     public class PointFieldManager : MonoBehaviour
     {

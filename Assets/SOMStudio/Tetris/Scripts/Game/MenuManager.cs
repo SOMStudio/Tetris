@@ -1,13 +1,13 @@
-﻿using Base;
-using Base.Sound;
-using Base.UI.HudPanel;
-using Base.Utility;
-using Game.Menu;
-using Game.SaveSystem;
+﻿using SOMStudio.Tetris.Scripts.Base;
+using SOMStudio.Tetris.Scripts.Base.Sound;
+using SOMStudio.Tetris.Scripts.Base.UI.HudPanel;
+using SOMStudio.Tetris.Scripts.Base.Utility;
+using SOMStudio.Tetris.Scripts.Game.Menu;
+using SOMStudio.Tetris.Scripts.Game.SaveSystem;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Game
+namespace SOMStudio.Tetris.Scripts.Game
 {
     public class MenuManager : BaseMenuManager, IMainMenu, IGameMenu
     {

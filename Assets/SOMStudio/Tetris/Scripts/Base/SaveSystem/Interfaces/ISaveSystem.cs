@@ -1,4 +1,4 @@
-﻿namespace Base.SaveSystem.Interfaces
+﻿namespace SOMStudio.Tetris.Scripts.Base.SaveSystem.Interfaces
 {
     public interface ISaveSystem
     {

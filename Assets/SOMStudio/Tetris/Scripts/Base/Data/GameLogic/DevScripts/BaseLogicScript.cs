@@ -1,9 +1,9 @@
 ﻿using System;
-using Base.Data.GameData.DevScripts;
-using Base.Data.LevelListData.DevScripts;
+using SOMStudio.Tetris.Scripts.Base.Data.GameData.DevScripts;
+using SOMStudio.Tetris.Scripts.Base.Data.LevelListData.DevScripts;
 using UnityEngine;
 
-namespace Base.Data.GameLogic.DevScripts
+namespace SOMStudio.Tetris.Scripts.Base.Data.GameLogic.DevScripts
 {
     public abstract class BaseLogicScript
     {
