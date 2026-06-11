@@ -13,8 +13,8 @@ namespace SOMStudio.Tetris.Scripts.Game.Field
         private Vector2Int spawnPoint;
         
         private readonly Dictionary<PointField, bool> playField = new();
-        
-        public ObjectField objectField;
+
+        private ObjectField objectField;
         private Vector2Int positionObjectField;
 
         public event UnityAction<IEnumerable<PointField>> DestroyLineEvent;
@@ -208,11 +208,12 @@ namespace SOMStudio.Tetris.Scripts.Game.Field
 
         private void FixDropObject(IEnumerable<PointField> points)
         {
-            Array.ForEach(points.ToArray(), SetPoint);
+            var pointField = points as PointField[] ?? points.ToArray();
+            Array.ForEach(pointField.ToArray(), SetPoint);
 
             objectField = null;
                     
-            FixObjectEvent?.Invoke(points);
+            FixObjectEvent?.Invoke(pointField);
         }
 
         private void CheckForDestroyLines(IEnumerable<PointField> points)
@@ -223,17 +224,18 @@ namespace SOMStudio.Tetris.Scripts.Game.Field
             foreach (var point in pointsArray)
             {
                 var pointsWithY = GetPointsWithY(point.y);
-                        
-                if (pointsWithY.ToArray().Length == size.x)
+
+                var pointField = pointsWithY as PointField[] ?? pointsWithY.ToArray();
+                if (pointField.ToArray().Length == size.x)
                 {
                     destroyLine.Add(point.y);
 
-                    foreach (var pointY in pointsWithY)
+                    foreach (var pointY in pointField)
                     {
                         playField.Remove(pointY);
                     }
 
-                    DestroyLineEvent?.Invoke(pointsWithY);
+                    DestroyLineEvent?.Invoke(pointField);
                 }
             }
 
@@ -242,16 +244,17 @@ namespace SOMStudio.Tetris.Scripts.Game.Field
                 for (int y = lineNumber + 1; y < size.y; y++)
                 {
                     var pointsWithY = GetPointsWithY(y);
-
-                    if (pointsWithY.ToArray().Length > 0)
+                    
+                    var pointField = pointsWithY as PointField[] ?? pointsWithY.ToArray();
+                    if (pointField.ToArray().Length > 0)
                     {
-                        foreach (var pointY in pointsWithY)
+                        foreach (var pointY in pointField)
                         {
                             playField.Remove(pointY);
                             playField.Add(pointY - new PointField(0, 1), true);
                         }
 
-                        DropLineEvent?.Invoke(pointsWithY);
+                        DropLineEvent?.Invoke(pointField);
                     }
                     else
                     {
@@ -317,7 +320,6 @@ namespace SOMStudio.Tetris.Scripts.Game.Field
                         } else if (centerObject.x + rotateObject.GetLeftDownRelativePointField().x < 0)
                         {
                             moveStep = 0 - (centerObject.x + rotateObject.GetLeftDownRelativePointField().x);
-                            moveRight = true;
                         }
                     }
                     else
@@ -356,7 +358,6 @@ namespace SOMStudio.Tetris.Scripts.Game.Field
                             } else if (centerObject.x + rotateObject.GetLeftDownRelativePointField().x <= prevPoint.x)
                             {
                                 moveStep = prevPoint.x - (centerObject.x + rotateObject.GetLeftDownRelativePointField().x) + 1;
-                                moveRight = true;
                             }
                         }
                     }

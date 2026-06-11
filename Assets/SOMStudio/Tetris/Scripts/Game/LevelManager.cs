@@ -42,7 +42,7 @@ namespace SOMStudio.Tetris.Scripts.Game
 
         private SingletonComposition<LevelManager> singletonComponent;
         
-        [System.NonSerialized] public static LevelManager Instance;
+        [NonSerialized] public static LevelManager Instance;
 
         public PlayFieldManager PlayFieldManager => playFieldManager;
         public PlayerManager PlayerManager => playerManager;
@@ -53,7 +53,7 @@ namespace SOMStudio.Tetris.Scripts.Game
         {
             singletonComponent = new SingletonComposition<LevelManager>(Instance, 
                 () => Instance = this,
-                () => Destroy(this.gameObject));
+                () => Destroy(gameObject));
         }
         
         private void Start()
@@ -64,7 +64,7 @@ namespace SOMStudio.Tetris.Scripts.Game
         private void InitLevel()
         {
             if (useDontDestroy)
-                DontDestroyOnLoad(this.gameObject);
+                DontDestroyOnLoad(gameObject);
             
             mainMenu = MenuManager.Instance;
             gameMenu = MenuManager.Instance;
@@ -82,7 +82,7 @@ namespace SOMStudio.Tetris.Scripts.Game
                 timeManager.reduceDropEvent.AddListener(ReduceDropStep);
                 timeManager.waveChangeEvent.AddListener(ChangeWave);
 
-                playFieldManager.updateNextDropObjectListEvent += dropObjectManagerUi.SetDropObjectList;
+                playFieldManager.UpdateNextDropObjectListEvent += dropObjectManagerUi.SetDropObjectList;
                 playFieldManager.SetDestroyRayCountListener(CatchLevelReward);
                 playFieldManager.LoseLifeEvent += LoseLife;
 

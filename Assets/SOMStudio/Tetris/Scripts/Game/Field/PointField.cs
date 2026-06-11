@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace SOMStudio.Tetris.Scripts.Game.Field
 {
-    public struct PointField
+    public struct PointField : IEquatable<PointField>
     {
         public int x;
         public int y;
@@ -52,22 +52,19 @@ namespace SOMStudio.Tetris.Scripts.Game.Field
 
         public override bool Equals(object obj)
         {
+            if (obj == null) return false;
+            
             var point = (PointField) obj;
 
-            if (point == null) return false;
-
-            if (point.x == this.x && point.y == this.y)
+            if (point.x == x && point.y == y)
                 return true;
-            else
-                return false;
+
+            return false;
         }
         
         public bool Equals(PointField point)
         {
-            if (point.x == this.x && point.y == this.y)
-                return true;
-            else
-                return false;
+            return point.x == x && point.y == y;
         }
         
         public override int GetHashCode()

@@ -19,20 +19,18 @@ namespace SOMStudio.Tetris.Scripts.Game
         private PlayField playField;
 
         private GameController gameController;
-        private LevelManager levelManager;
 
         private global::SOMStudio.Tetris.Scripts.Game.GameData.DevScripts.GameData gameDate;
         private PlayerManager playerManager;
 
         private ObjectPool objectPool;
 
-        public event UnityAction<IEnumerable<ObjectField>> updateNextDropObjectListEvent;
+        public event UnityAction<IEnumerable<ObjectField>> UpdateNextDropObjectListEvent;
         public event UnityAction LoseLifeEvent;
 
         private void Start()
         {
             gameController = GameController.Instance;
-            levelManager = LevelManager.Instance;
 
             gameDate = (global::SOMStudio.Tetris.Scripts.Game.GameData.DevScripts.GameData) gameController.GameData.Data;
             playerManager = LevelManager.Instance.PlayerManager;
@@ -111,7 +109,7 @@ namespace SOMStudio.Tetris.Scripts.Game
                 nextDropObjectList[i] = playField.GetRandomDropObject();
             }
             
-            updateNextDropObjectListEvent?.Invoke(nextDropObjectList);
+            UpdateNextDropObjectListEvent?.Invoke(nextDropObjectList);
         }
         
         private void SetNextDropObject()
@@ -123,9 +121,9 @@ namespace SOMStudio.Tetris.Scripts.Game
                 nextDropObjectList[i - 1] = nextDropObjectList[i];
             }
 
-            nextDropObjectList[nextDropObjectList.Length - 1] = playField.GetRandomDropObject();
+            nextDropObjectList[^1] = playField.GetRandomDropObject();
             
-            updateNextDropObjectListEvent?.Invoke(nextDropObjectList);
+            UpdateNextDropObjectListEvent?.Invoke(nextDropObjectList);
         }
         
         public void SetDestroyRayCountListener(UnityAction<int> action)
@@ -181,10 +179,10 @@ namespace SOMStudio.Tetris.Scripts.Game
             {
                 if (pointList.ContainsKey(point))
                 {
-                    var pointFM = pointList[point];
+                    var pointFieldManager = pointList[point];
                     pointList.Remove(point);
                     
-                    objectPool.LiberationObject(pointFM.transform);
+                    objectPool.LiberationObject(pointFieldManager.transform);
                 }
             }
         }
@@ -195,12 +193,12 @@ namespace SOMStudio.Tetris.Scripts.Game
             {
                 if (pointList.ContainsKey(point))
                 {
-                    var pointFM = pointList[point];
+                    var pointFieldManager = pointList[point];
                     pointList.Remove(point);
 
                     var newPoint = point - new PointField(0, 1);
-                    pointList.Add(newPoint, pointFM);
-                    pointFM.SetPosition(newPoint);
+                    pointList.Add(newPoint, pointFieldManager);
+                    pointFieldManager.SetPosition(newPoint);
                 }
             }
         }
@@ -211,12 +209,12 @@ namespace SOMStudio.Tetris.Scripts.Game
             
             foreach (var point in points)
             {
-                var goNew = objectPool.GetObject(point.GetV3Pos()).gameObject;
-                var goPFM = goNew.GetComponent<PointFieldManager>();
+                var newGameObject = objectPool.GetObject(point.GetV3Pos()).gameObject;
+                var pointFieldManager = newGameObject.GetComponent<PointFieldManager>();
                 
-                goPFM.SetColor(color);
+                pointFieldManager.SetColor(color);
                 
-                pointList.Add(point, goPFM);
+                pointList.Add(point, pointFieldManager);
             }
         }
 

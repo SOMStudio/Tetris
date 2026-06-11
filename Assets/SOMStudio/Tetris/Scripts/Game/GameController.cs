@@ -18,8 +18,7 @@ namespace SOMStudio.Tetris.Scripts.Game
 
         private IMainMenu mainMenu;
         private IGameMenu gameMenu;
-        private BaseUserManager userManager;
-        
+
         [System.NonSerialized] public static GameController Instance;
 
         private void Awake()
@@ -41,8 +40,7 @@ namespace SOMStudio.Tetris.Scripts.Game
             
             mainMenu = MenuManager.Instance;
             gameMenu = MenuManager.Instance;
-            userManager = UserManager.Instance;
-            
+
             if (useDontDestroy)
                 DontDestroyOnLoad(this.gameObject);
         }

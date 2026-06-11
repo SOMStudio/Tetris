@@ -38,7 +38,7 @@ namespace SOMStudio.Tetris.Scripts.Game
         {
             singletonComponent = new SingletonComposition<MenuManager>(Instance, 
                 () => Instance = this,
-                () => Destroy(this.gameObject));
+                () => Destroy(gameObject));
         }
         
         private void Start()
@@ -63,7 +63,7 @@ namespace SOMStudio.Tetris.Scripts.Game
             OpenMenu();
             
             if (useDontDestroy)
-                DontDestroyOnLoad(this.gameObject);
+                DontDestroyOnLoad(gameObject);
             
             PrefabSaveSystem.Instance?.AddListenerMuteEvent(ChangeMuteUnmuteButton);
         }

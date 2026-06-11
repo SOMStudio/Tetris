@@ -12,7 +12,7 @@ namespace SOMStudio.Tetris.Scripts.Game
         
         private void Awake()
         {
-            pointObject = this.gameObject;
+            pointObject = gameObject;
 
             rend = GetComponent<Renderer>();
         }

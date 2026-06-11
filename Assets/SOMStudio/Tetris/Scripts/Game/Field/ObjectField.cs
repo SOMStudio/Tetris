@@ -13,91 +13,105 @@ namespace SOMStudio.Tetris.Scripts.Game.Field
         private Vector2Int centerTransformation = Vector2Int.zero;
         private bool canRotate = true;
 
-        public static ObjectField LightningLeftRight()
+        private static ObjectField LightningLeftRight()
         {
-            var objectSet = new Dictionary<PointField, bool>();
-            objectSet.Add(new PointField(0,0), true);
-            objectSet.Add(new PointField(0,1), true);
-            objectSet.Add(new PointField(1,1), true);
-            objectSet.Add(new PointField(1,2), true);
-            
+            var objectSet = new Dictionary<PointField, bool>
+            {
+                { new PointField(0, 0), true },
+                { new PointField(0, 1), true },
+                { new PointField(1,1), true },
+                { new PointField(1,2), true }
+            };
+
             return new ObjectField("LightningLeftRight", objectSet, new Vector2Int(2, 3), Vector2Int.one);
         }
-        
-        public static ObjectField LightningRightLeft()
+
+        private static ObjectField LightningRightLeft()
         {
-            var objectSet = new Dictionary<PointField, bool>();
-            objectSet.Add(new PointField(1,0), true);
-            objectSet.Add(new PointField(1,1), true);
-            objectSet.Add(new PointField(0,1), true);
-            objectSet.Add(new PointField(0,2), true);
-            
+            var objectSet = new Dictionary<PointField, bool>
+            {
+                { new PointField(1, 0), true },
+                { new PointField(1, 1), true },
+                { new PointField(0,1), true },
+                { new PointField(0,2), true }
+            };
+
             return new ObjectField("LightningRightLeft", objectSet, new Vector2Int(2, 3), Vector2Int.one);
         }
-        
-        public static ObjectField HookToRight()
+
+        private static ObjectField HookToRight()
         {
-            var objectSet = new Dictionary<PointField, bool>();
-            objectSet.Add(new PointField(0,0), true);
-            objectSet.Add(new PointField(0,1), true);
-            objectSet.Add(new PointField(0,2), true);
-            objectSet.Add(new PointField(1,2), true);
-            
+            var objectSet = new Dictionary<PointField, bool>
+            {
+                { new PointField(0, 0), true },
+                { new PointField(0, 1), true },
+                { new PointField(0,2), true },
+                { new PointField(1,2), true }
+            };
+
             return new ObjectField("HookToRight", objectSet, new Vector2Int(2, 3), Vector2Int.one);
         }
-        
-        public static ObjectField HookToLeft()
+
+        private static ObjectField HookToLeft()
         {
-            var objectSet = new Dictionary<PointField, bool>();
-            objectSet.Add(new PointField(1,0), true);
-            objectSet.Add(new PointField(1,1), true);
-            objectSet.Add(new PointField(1,2), true);
-            objectSet.Add(new PointField(0,2), true);
-            
+            var objectSet = new Dictionary<PointField, bool>
+            {
+                { new PointField(1, 0), true },
+                { new PointField(1, 1), true },
+                { new PointField(1,2), true },
+                { new PointField(0,2), true }
+            };
+
             return new ObjectField("HookToLeft", objectSet, new Vector2Int(2, 3), Vector2Int.one);
         }
-        
-        public static ObjectField Line()
+
+        private static ObjectField Line()
         {
-            var objectSet = new Dictionary<PointField, bool>();
-            objectSet.Add(new PointField(0,0), true);
-            objectSet.Add(new PointField(0,1), true);
-            objectSet.Add(new PointField(0,2), true);
-            objectSet.Add(new PointField(0,3), true);
-            
+            var objectSet = new Dictionary<PointField, bool>
+            {
+                { new PointField(0, 0), true },
+                { new PointField(0, 1), true },
+                { new PointField(0,2), true },
+                { new PointField(0,3), true }
+            };
+
             return new ObjectField("Line", objectSet, new Vector2Int(1, 4), new Vector2Int(0, 1));
         }
-        
-        public static ObjectField Cube()
+
+        private static ObjectField Cube()
         {
-            var objectSet = new Dictionary<PointField, bool>();
-            objectSet.Add(new PointField(0,0), true);
-            objectSet.Add(new PointField(0,1), true);
-            objectSet.Add(new PointField(1,0), true);
-            objectSet.Add(new PointField(1,1), true);
-            
+            var objectSet = new Dictionary<PointField, bool>
+            {
+                { new PointField(0, 0), true },
+                { new PointField(0, 1), true },
+                { new PointField(1,0), true },
+                { new PointField(1,1), true }
+            };
+
             return new ObjectField("Cube", objectSet, new Vector2Int(2, 2), new Vector2Int(1, 1), false);
         }
 
-        public static ObjectField Triangle()
+        private static ObjectField Triangle()
         {
-            var objectSet = new Dictionary<PointField, bool>();
-            objectSet.Add(new PointField(0,0), true);
-            objectSet.Add(new PointField(1,0), true);
-            objectSet.Add(new PointField(2,0), true);
-            objectSet.Add(new PointField(1,1), true);
-            
+            var objectSet = new Dictionary<PointField, bool>
+            {
+                { new PointField(0, 0), true },
+                { new PointField(1, 0), true },
+                { new PointField(2,0), true },
+                { new PointField(1,1), true }
+            };
+
             return new ObjectField("Triangle", objectSet, new Vector2Int(3, 2), new Vector2Int(1, 0));
         }
 
-        private static ObjectField[] objectList = new ObjectField[7] {LightningLeftRight(), LightningRightLeft(), HookToLeft(), HookToRight(), Line(), Cube(), Triangle()};
+        private static readonly ObjectField[] ObjectList = {LightningLeftRight(), LightningRightLeft(), HookToLeft(), HookToRight(), Line(), Cube(), Triangle()};
 
         public static ObjectField GetRandomObject()
         {
-            return objectList[Random.Range(0, objectList.Length)];
+            return ObjectList[Random.Range(0, ObjectList.Length)];
         }
-        
-        public ObjectField(string name, Dictionary<PointField, bool> objectSet, Vector2Int objectSize, Vector2Int center, bool rotate = true)
+
+        private ObjectField(string name, Dictionary<PointField, bool> objectSet, Vector2Int objectSize, Vector2Int center, bool rotate = true)
         {
             SetObject(name, objectSet, objectSize);
             SetTransformationCenter(center, rotate);
@@ -109,14 +123,14 @@ namespace SOMStudio.Tetris.Scripts.Game.Field
 
         public bool CanRotate => canRotate;
 
-        public void SetObject(string name, Dictionary<PointField, bool> objectSet, Vector2Int objectSize)
+        private void SetObject(string setName, Dictionary<PointField, bool> objectSet, Vector2Int objectSize)
         {
-            this.name = name;
+            name = setName;
             objectField = objectSet;
             size = objectSize;
         }
 
-        public void SetTransformationCenter(Vector2Int center, bool rotate = true)
+        private void SetTransformationCenter(Vector2Int center, bool rotate = true)
         {
             centerTransformation = center;
             canRotate = rotate;
@@ -270,10 +284,8 @@ namespace SOMStudio.Tetris.Scripts.Game.Field
                 {
                     var getKeyPos = new PointField(i, j);
                 
-                    if (objectField.ContainsKey(getKeyPos))
+                    if (objectField.TryGetValue(getKeyPos, out var getPoint))
                     {
-                        bool getPoint = objectField[getKeyPos];
-                    
                         var newKeyPos = new PointField(j,size.x - i - 1);
                         rotateField[newKeyPos] = getPoint;
                     }

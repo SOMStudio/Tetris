@@ -30,7 +30,7 @@ namespace SOMStudio.Tetris.Scripts.Game
 		{
 			singletonComponent = new SingletonComposition<UserManager>(Instance, 
 				() => Instance = this,
-				() => Destroy(this.gameObject));
+				() => Destroy(gameObject));
 
 			string fileName = $"{Application.persistentDataPath}/playerData_{gamePrefsName}.dat";
 			
@@ -40,7 +40,7 @@ namespace SOMStudio.Tetris.Scripts.Game
 		private void Start()
 		{
 			if (useDontDestroy)
-				DontDestroyOnLoad(this.gameObject);
+				DontDestroyOnLoad(gameObject);
 
 			score.AddListener(CheckHighScore);
 			

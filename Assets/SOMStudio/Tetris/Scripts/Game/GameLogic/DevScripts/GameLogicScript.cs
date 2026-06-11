@@ -19,7 +19,7 @@ namespace SOMStudio.Tetris.Scripts.Game.GameLogic.DevScripts
 
         public override void InitGameRules(BaseGameController gameControllerSet, BaseDataTemplate gameDataSet)
         {
-            this.gameController = gameControllerSet;
+            gameController = gameControllerSet;
             
             gameData = (SOMStudio.Tetris.Scripts.Game.GameData.DevScripts.GameData)gameDataSet.Data;
         }
