@@ -21,7 +21,6 @@ Tetris 3D, complex project
 5) Settings system (script object) for easy changing of game settings.
 6) Sounds, music in the game.
 7) Use of object pool to reduce memory usage.
-8) ... and many more.
 
 ## Packages:
 1) DoTween - for moving and fading panels in the user interface.
@@ -32,4 +31,5 @@ All
 
 ## Unity 2022
 
-![Tetris](screenshot.png)
+![Tetris](/Resources/Screenshot1.jpg)
+![Tetris](/Resources/Tetris3D.jpg)
