@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace SOMStudio.Tetris.Scripts.Game.Spawn
+namespace SOMStudio.Tetris.Scripts.Game.Time
 {
     public class TimeManager : MonoBehaviour
     {
